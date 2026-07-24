@@ -6,6 +6,7 @@ Power BI build guide (star schema, same columns across all 4 matches).
 """
 import glob
 import os
+import re
 import pandas as pd
 import streamlit as st
 
@@ -46,6 +47,52 @@ OUTCOME_PL = {
     "Saved": "Obroniony", "Blocked": "Zablokowany", "Off Target": "Niecelny",
     "Hit Woodwork": "Trafienie w słupek", "Goal": "Gol",
 }
+POSITION_PL = {"GK": "BR", "DEF": "OBR", "MID": "POM", "FWD": "NAP"}
+
+# The ~30 substitution descriptions in the raw data follow a regular
+# "X replaces Y[, note]." shape, so a single regex covers them; card
+# descriptions are far more varied in structure but there are only 7 total
+# across all 4 matches, so those are translated verbatim below instead.
+_SUB_NOTE_PL = {
+    "Zaïre-Emery's World Cup debut": "debiut Zaïre-Emery'ego na Mistrzostwach Świata",
+    "injury": "kontuzja",
+}
+_SUB_RE = re.compile(r"^(.+?) replaces (?:goalscorer )?(.+?)( late in extra time)?(?:\s*\((.+?)\))?\.$")
+
+def translate_substitution(description: str) -> str:
+    m = _SUB_RE.match(description.strip())
+    if not m:
+        return description
+    player_in, player_out, extra_time, note = m.groups()
+    text = f"{player_in} wchodzi za {player_out}"
+    if extra_time:
+        text += " (dogrywka)"
+    if note and "readme" not in note.lower():
+        text += f" ({_SUB_NOTE_PL.get(note.strip(), note)})"
+    return text + "."
+
+CARD_DESCRIPTIONS_PL = {
+    "Issa Diop booked for serious foul play.":
+        "Issa Diop ukarany żółtą kartką za poważny faul.",
+    "Charles De Ketelaere booked shortly after his equalizer.":
+        "Charles De Ketelaere ukarany żółtą kartką wkrótce po golu wyrównującym.",
+    "Pau Cubarsí booked for a tactical foul.":
+        "Pau Cubarsí ukarany żółtą kartką za faul taktyczny.",
+    "Aymeric Laporte booked for time-wasting/tactical foul in stoppage time.":
+        "Aymeric Laporte ukarany żółtą kartką za grę na czas / faul taktyczny w doliczonym czasie.",
+    "Kristoffer Ajer booked for protesting the referee's decision.":
+        "Kristoffer Ajer ukarany żółtą kartką za protestowanie przeciwko decyzji sędziego.",
+    "Leandro Paredes initially shown a yellow card for a foul on Breel Embolo.":
+        "Leandro Paredes początkowo ukarany żółtą kartką za faul na Breelu Embolo.",
+    "Breel Embolo shown a second yellow (reassigned card) and sent off - the first application "
+    "of IFAB's 'mistaken identity' VAR protocol at a men's World Cup. Switzerland reduced to 10 men.":
+        "Breel Embolo otrzymał drugą żółtą kartkę (skorygowaną decyzją VAR) i został wyrzucony z boiska "
+        "— pierwszy przypadek zastosowania protokołu VAR ds. „pomyłki tożsamości” IFAB na mistrzostwach "
+        "świata mężczyzn. Szwajcaria w 10 osób.",
+}
+
+def translate_card(description: str) -> str:
+    return CARD_DESCRIPTIONS_PL.get(description.strip(), description)
 
 
 def build_match_labels(dim_match: pd.DataFrame) -> dict:

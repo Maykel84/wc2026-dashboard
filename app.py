@@ -8,6 +8,7 @@ Deploy:        push this folder to a GitHub repo and deploy on
                Streamlit Community Cloud (share.streamlit.io) or Hugging Face Spaces.
 """
 import base64
+import io
 import os
 import pandas as pd
 import numpy as np
@@ -16,7 +17,8 @@ import plotly.express as px
 import streamlit as st
 
 from data_loader import (load_all, MATCH_IDS, build_match_labels, team_label, TEAM_NAMES_PL, TEAM_FLAGS,
-                          CONFEDERATION_PL, SITUATION_PL, OUTCOME_PL)
+                          CONFEDERATION_PL, SITUATION_PL, OUTCOME_PL, POSITION_PL,
+                          translate_substitution, translate_card)
 from pitch_charts import shot_map, heatmap, pass_map
 
 ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
@@ -37,8 +39,10 @@ st.markdown(f"""
 .stTabs [data-baseweb="tab-list"] {{gap: 4px;}}
 div[data-testid="stMetricValue"] {{font-size: 22px;}}
 
-/* Lock the sidebar width — hide the drag handle so it can't be resized. */
-section[data-testid="stSidebar"] {{
+/* Lock the sidebar width — hide the drag handle so it can't be resized.
+   Scoped to aria-expanded="true" so collapsing it still lets the main content
+   area reclaim the freed space instead of leaving a blank gap. */
+section[data-testid="stSidebar"][aria-expanded="true"] {{
     width: 320px !important;
     min-width: 320px !important;
     max-width: 320px !important;
@@ -46,6 +50,16 @@ section[data-testid="stSidebar"] {{
 section[data-testid="stSidebar"] > div:not([data-testid="stSidebarContent"]) {{
     display: none !important;
     pointer-events: none !important;
+}}
+
+/* Logo ~200% bigger than Streamlit's default 24px — give the header room to grow. */
+section[data-testid="stSidebar"] [data-testid="stSidebarHeader"] {{
+    height: auto;
+    padding: 14px 0 6px 0;
+}}
+section[data-testid="stSidebar"] [data-testid="stSidebarLogo"] {{
+    width: 72px !important;
+    height: 72px !important;
 }}
 
 /* Streamlit sizes this widget's container to its measured content width
@@ -182,6 +196,24 @@ def cumulative_xg(shots_df, home_id, away_id):
     origin = pd.DataFrame({"minute": [0], "home_cum": [0.0], "away_cum": [0.0]})
     return pd.concat([origin, s[["minute", "home_cum", "away_cum"]]], ignore_index=True)
 
+def pyplot_html(fig, height=420):
+    """Render a matplotlib figure as a fixed-height <img>, so it lines up with
+    a Plotly chart of the same height sitting next to it in another column —
+    st.pyplot alone scales only to the column's width, not a shared height."""
+    buf = io.BytesIO()
+    fig.savefig(buf, format="png", bbox_inches="tight", dpi=140, transparent=True)
+    b64 = base64.b64encode(buf.getvalue()).decode()
+    return (f'<div style="height:{height}px; display:flex; align-items:center; justify-content:center;">'
+            f'<img src="data:image/png;base64,{b64}" style="max-height:{height}px; max-width:100%; object-fit:contain;"></div>')
+
+def add_end_label(fig, x_end, y_end, color, fmt="{:.2f}"):
+    """Stamp the final value at the end of a cumulative line so the total is
+    readable at a glance without hovering."""
+    fig.add_annotation(x=x_end, y=y_end, text=fmt.format(y_end), showarrow=False,
+                        xanchor="left", yanchor="middle", xshift=8,
+                        font=dict(size=11, color=color, family="Arial Black"))
+    return fig
+
 def add_goal_markers(fig, goals_df):
     """A bare dashed line at the goal minute isn't self-explanatory — label
     each one with a ball icon, the minute and the scoring team's flag."""
@@ -235,7 +267,8 @@ if MID:
                     trow = team_info.loc[team]
                     region = CONFEDERATION_PL.get(trow["confederation"], trow["confederation"])
                     st.caption(f"Trener: {trow['head_coach']} · Region: {region} · Ustawienie: {trow['formation']}")
-                starters = players[(players["team_id"] == team) & (players["match_role"].str.contains("Starter"))]
+                starters = players[(players["team_id"] == team) & (players["match_role"].str.contains("Starter"))].copy()
+                starters["position"] = starters["position"].map(POSITION_PL).fillna(starters["position"])
                 st.dataframe(starters[["position", "player_name"]].rename(
                     columns={"position": "Poz.", "player_name": "Zawodnik"}),
                     hide_index=True, use_container_width=True)
@@ -243,20 +276,23 @@ if MID:
                 if len(subs):
                     st.markdown("**Zmiany**")
                     for _, r in subs.iterrows():
-                        st.caption(f"{r['minute']}' — {r['description']}")
+                        st.caption(f"{r['minute']}' — {translate_substitution(r['description'])}")
         st.markdown("---")
         goals = shots[shots["outcome"] == "Goal"].sort_values("minute")
         st.markdown("**Gole**")
         for _, g in goals.iterrows():
-            assist = f" (asysta: {g['assist_player_id']})" if pd.notna(g.get("assist_player_id")) and g.get("assist_player_id") else ""
             pname = players.loc[players["player_id"] == g["player_id"], "player_name"]
             pname = pname.iloc[0] if len(pname) else g["player_id"]
+            assist = ""
+            if pd.notna(g.get("assist_player_id")) and g.get("assist_player_id"):
+                aname = players.loc[players["player_id"] == g["assist_player_id"], "player_name"]
+                assist = f" (asysta: {aname.iloc[0] if len(aname) else g['assist_player_id']})"
             st.caption(f"{g['minute']}' — {team_label(g['team_id'])} — {pname}{assist}")
         cards = timeline[timeline["event_name"].isin(["Yellow Card", "Red Card"])]
         if len(cards):
             st.markdown("**Kartki / zdarzenia dyscyplinarne**")
             for _, r in cards.iterrows():
-                st.caption(f"{r['minute']}' — {r['description']}")
+                st.caption(f"{r['minute']}' — {translate_card(r['description'])}")
 
     with tabs[1]:
         st.caption("Zakładka dostępna wyłącznie na poziomie pojedynczego meczu — pełny box score. "
@@ -279,19 +315,27 @@ if MID:
         sel_rows = sel.get("selection", {}).get("rows", []) if sel else []
         highlight_id = show.iloc[sel_rows[0]]["shot_id"] if sel_rows else None
 
+        CHART_H = 420
         c1, c2 = st.columns(2)
         with c1:
-            st.pyplot(shot_map(shots, home, away, highlight_shot_id=highlight_id), use_container_width=True)
+            st.markdown(pyplot_html(shot_map(shots, home, away, highlight_shot_id=highlight_id), height=CHART_H),
+                        unsafe_allow_html=True)
         with c2:
             xgc = cumulative_xg(shots, home, away)
             fig = go.Figure()
             fig.add_trace(go.Scatter(x=xgc["minute"], y=xgc["home_cum"], name=team_label(home),
-                                      line=dict(color="#6cace4", shape="hv")))
+                                      line=dict(color="#6cace4", shape="hv"),
+                                      hovertemplate="minuta %{x}<br>xG: %{y:.2f}<extra></extra>"))
             fig.add_trace(go.Scatter(x=xgc["minute"], y=xgc["away_cum"], name=team_label(away),
-                                      line=dict(color="#e0524b", shape="hv")))
+                                      line=dict(color="#e0524b", shape="hv"),
+                                      hovertemplate="minuta %{x}<br>xG: %{y:.2f}<extra></extra>"))
             add_goal_markers(fig, goals)
-            fig.update_layout(template="plotly_dark", height=420, xaxis_title="minuta", yaxis_title="skumulowane xG",
-                               margin=dict(l=10, r=10, t=46, b=10))
+            last = xgc.iloc[-1]
+            add_end_label(fig, last["minute"], last["home_cum"], "#6cace4")
+            add_end_label(fig, last["minute"], last["away_cum"], "#e0524b")
+            fig.update_layout(template="plotly_dark", height=CHART_H, xaxis_title="minuta", yaxis_title="skumulowane xG",
+                               margin=dict(l=10, r=36, t=46, b=10),
+                               xaxis=dict(range=[0, last["minute"] + 8]))
             st.plotly_chart(fig, use_container_width=True)
         st.markdown("**Lista strzałów** — kliknij wiersz, aby podświetlić ten strzał na mapie; kliknij nagłówek kolumny, aby posortować.")
         show_display = show[["minute", "team_id", "player_name", "situation", "outcome", "xg", "celny"]].copy()
@@ -349,7 +393,8 @@ if MID:
                 labels = [label for label, _ in phase_types]
                 fig = go.Figure(go.Pie(labels=labels, values=values, hole=0.55,
                                         marker=dict(colors=[PHASE_COLORS[l] for l in labels]),
-                                        texttemplate="%{label}<br>%{value:.0f} min", sort=False))
+                                        texttemplate="%{label}<br>%{value:.0f} min", sort=False,
+                                        hovertemplate="%{label}: %{percent}<extra></extra>"))
                 fig.update_layout(template="plotly_dark", height=260, showlegend=False,
                                    margin=dict(l=10, r=10, t=10, b=10))
                 st.plotly_chart(fig, use_container_width=True)
@@ -357,12 +402,15 @@ if MID:
         st.markdown("**Średni udział faz w liczbach**")
         fig = go.Figure()
         for label, col_name in phase_types:
+            minutes_col = f"{col_name}_min"
             fig.add_trace(go.Bar(
                 y=[team_label(home), team_label(away)],
                 x=[avg.loc[t, col_name] if t in avg.index else 0 for t in (home, away)],
                 name=label, orientation="h", marker_color=PHASE_COLORS[label],
                 text=[f"{avg.loc[t, col_name]:.0f}%" if t in avg.index else "" for t in (home, away)],
-                textposition="inside"))
+                textposition="inside", insidetextanchor="middle",
+                customdata=[minutes_sum.loc[t, minutes_col] if t in minutes_sum.index else 0 for t in (home, away)],
+                hovertemplate="%{customdata:.0f} min<extra></extra>"))
         fig.update_layout(barmode="stack", template="plotly_dark", height=220,
                            margin=dict(l=10, r=10, t=10, b=10), xaxis=dict(title="%", range=[0, 100]),
                            yaxis=dict(autorange="reversed"))
@@ -426,29 +474,39 @@ else:
         table = dm.merge(stats_all.groupby("match_id")["xg"].apply(list).reset_index(), on="match_id")
         display = dm[["match_id", "home_team_id", "away_team_id", "home_score", "away_score", "extra_time"]].copy()
         display["Mecz"] = display["home_team_id"].map(TEAM_NAMES_PL) + " – " + display["away_team_id"].map(TEAM_NAMES_PL)
+        display["extra_time"] = display["extra_time"].map({"Yes": "Tak", "No": "Nie"})
         st.dataframe(display[["Mecz", "home_score", "away_score", "extra_time"]].rename(
             columns={"home_score": "Gospodarz", "away_score": "Gość", "extra_time": "Dogrywka"}),
             hide_index=True, use_container_width=True)
         st.caption("Strona zbiorcza pokazuje dane zsumowane ze wszystkich 4 ćwierćfinałów. Wybierz mecz w panelu bocznym, by zobaczyć pełne szczegóły (składy, zmiany, statystyki ogólne).")
 
     with tabs[1]:
+        CHART_H = 380
         c1, c2 = st.columns(2)
         with c1:
             xg_by_team = shots_all.groupby("team_id")["xg"].sum().sort_values(ascending=False)
             fig = px.bar(x=xg_by_team.index.map(TEAM_NAMES_PL), y=xg_by_team.values, labels={"x": "", "y": "xG"})
-            fig.update_layout(template="plotly_dark", height=380, margin=dict(l=10, r=10, t=10, b=10))
+            fig.update_traces(texttemplate="%{y:.2f}", textposition="outside",
+                               hovertemplate="%{x}<br>xG: %{y:.2f}<extra></extra>")
+            fig.update_layout(template="plotly_dark", height=CHART_H, margin=dict(l=10, r=10, t=10, b=10))
             st.plotly_chart(fig, use_container_width=True)
         with c2:
-            st.caption("Pomijamy nakładanie map strzałów z 4 różnych meczów (nieczytelne) — pełna mapa dostępna na stronie każdego meczu.")
+            PALETTE = ["#6cace4", "#e0524b", "#3fbf7f", "#f2b134"]
             fig = go.Figure()
-            for mid in MATCH_IDS:
+            max_minute = 0
+            for i, mid in enumerate(MATCH_IDS):
                 mrow = dm.loc[dm["match_id"] == mid].iloc[0]
                 xgc = cumulative_xg(shots_all.query("match_id == @mid"), mrow["home_team_id"], mrow["away_team_id"])
                 pair = f"{TEAM_NAMES_PL.get(mrow['home_team_id'])} – {TEAM_NAMES_PL.get(mrow['away_team_id'])}"
-                fig.add_trace(go.Scatter(x=xgc["minute"], y=xgc["home_cum"] + xgc["away_cum"], name=pair,
-                                          line=dict(shape="hv")))
-            fig.update_layout(template="plotly_dark", height=380, xaxis_title="minuta", yaxis_title="łączne xG",
-                               margin=dict(l=10, r=10, t=10, b=10))
+                total = xgc["home_cum"] + xgc["away_cum"]
+                color = PALETTE[i % len(PALETTE)]
+                fig.add_trace(go.Scatter(x=xgc["minute"], y=total, name=pair, line=dict(shape="hv", color=color),
+                                          hovertemplate="minuta %{x}<br>xG: %{y:.2f}<extra></extra>"))
+                last_x, last_y = xgc["minute"].iloc[-1], total.iloc[-1]
+                add_end_label(fig, last_x, last_y, color)
+                max_minute = max(max_minute, last_x)
+            fig.update_layout(template="plotly_dark", height=CHART_H, xaxis_title="minuta", yaxis_title="łączne xG",
+                               margin=dict(l=10, r=36, t=10, b=10), xaxis=dict(range=[0, max_minute + 8]))
             st.plotly_chart(fig, use_container_width=True)
 
     with tabs[2]:
@@ -458,6 +516,7 @@ else:
         goals_all["bucket"] = pd.cut(goals_all["minute"], bins=bins, labels=labels, right=True)
         counts = goals_all["bucket"].value_counts().reindex(labels, fill_value=0)
         fig = px.bar(x=counts.index, y=counts.values, labels={"x": "", "y": "liczba goli"})
+        fig.update_traces(hovertemplate="%{x}<br>Gole: %{y}<extra></extra>")
         fig.update_layout(template="plotly_dark", height=380, margin=dict(l=10, r=10, t=10, b=10))
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Rozkład minut, w których padły gole — zsumowany z 4 meczów (12 goli łącznie).")
@@ -471,6 +530,8 @@ else:
                                                 "defense_pct": "Obrona"})
         fig = px.bar(avg_phase, orientation="h", labels={"value": "%", "team_id": ""},
                      color_discrete_map={"Atak": "#3fbf7f", "Przejściowa": "#f2b134", "Obrona": "#e0524b"})
+        fig.update_traces(texttemplate="%{x:.0f}%", textposition="inside", insidetextanchor="middle",
+                           hovertemplate="%{x:.0f}%<extra></extra>")
         fig.update_layout(template="plotly_dark", height=380, margin=dict(l=10, r=10, t=10, b=10),
                            xaxis=dict(range=[0, 100]),
                            yaxis=dict(ticktext=[TEAM_NAMES_PL.get(t, t) for t in avg_phase.index],
@@ -488,13 +549,16 @@ else:
         fig = px.bar(agg, x="team_id", y="pct", color="third", barmode="stack",
                      color_discrete_map={"Obrona": "#e0524b", "Środek": "#f2b134", "Atak": "#3fbf7f"},
                      labels={"team_id": "", "pct": "% dotknięć"})
-        fig.update_layout(template="plotly_dark", height=400, margin=dict(l=10, r=10, t=10, b=10))
+        fig.update_traces(texttemplate="%{y:.0f}%", textposition="inside", insidetextanchor="middle", hoverinfo="skip")
+        fig.update_layout(template="plotly_dark", height=400, margin=dict(l=10, r=10, t=10, b=10), hovermode=False)
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Pełna siatka 30 stref jest czytelna tylko dla jednego meczu/drużyny — tu uproszczone porównanie obrona/środek/atak dla wszystkich 8 zespołów.")
 
     with tabs[5]:
         succ = passes_all.groupby("team_id").apply(lambda d: (d["outcome"] == "Successful").mean() * 100).sort_values(ascending=False)
         fig = px.bar(x=succ.index.map(TEAM_NAMES_PL), y=succ.values, labels={"x": "", "y": "Skuteczność wejść w pole karne %"})
+        fig.update_traces(texttemplate="%{y:.0f}%", textposition="inside", insidetextanchor="middle",
+                           hovertemplate="%{x}<br>Skuteczność: %{y:.0f}%<extra></extra>")
         fig.update_layout(template="plotly_dark", height=400, margin=dict(l=10, r=10, t=10, b=10))
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Mapa strzałek podań w pole karne jest czytelna tylko per mecz — dostępna na stronie każdego meczu.")
