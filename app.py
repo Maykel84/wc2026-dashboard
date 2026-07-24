@@ -268,6 +268,8 @@ if MID:
                     region = CONFEDERATION_PL.get(trow["confederation"], trow["confederation"])
                     st.caption(f"Trener: {trow['head_coach']} · Region: {region} · Ustawienie: {trow['formation']}")
                 starters = players[(players["team_id"] == team) & (players["match_role"].str.contains("Starter"))].copy()
+                position_order = pd.Categorical(starters["position"], categories=["GK", "DEF", "MID", "FWD"], ordered=True)
+                starters = starters.assign(_pos_order=position_order).sort_values("_pos_order")
                 starters["position"] = starters["position"].map(POSITION_PL).fillna(starters["position"])
                 st.dataframe(starters[["position", "player_name"]].rename(
                     columns={"position": "Poz.", "player_name": "Zawodnik"}),
@@ -435,6 +437,11 @@ if MID:
                                use_container_width=True)
 
     with tabs[6]:
+        st.caption("„Wejścia” to liczba podań, które zakończyły się w polu karnym — to inna miara niż całkowita "
+                   "liczba strzałów drużyny (zakładka „Statystyki ogólne”), bo większość strzałów powstaje z innych "
+                   "sytuacji (dryblingi, dobitki, strzały z dystansu, rzuty rożne bezpośrednio z główki itp.). "
+                   "„→ strzał” to odsetek TYCH konkretnych podań, po których w ciągu 10 sekund padł strzał — "
+                   "nie odsetek wszystkich strzałów drużyny.")
         c1, c2 = st.columns(2)
         for col, team in [(c1, home), (c2, away)]:
             with col:
@@ -555,6 +562,9 @@ else:
         st.caption("Pełna siatka 30 stref jest czytelna tylko dla jednego meczu/drużyny — tu uproszczone porównanie obrona/środek/atak dla wszystkich 8 zespołów.")
 
     with tabs[5]:
+        st.caption("Skuteczność = odsetek podań w pole karne, które doszły do adresata (nie odsetek strzałów — "
+                   "większość strzałów drużyny nie pochodzi z takiej podania, więc te liczby nie muszą się zgadzać "
+                   "ze „Strzałami” w zakładce meczu).")
         succ = passes_all.groupby("team_id").apply(lambda d: (d["outcome"] == "Successful").mean() * 100).sort_values(ascending=False)
         fig = px.bar(x=succ.index.map(TEAM_NAMES_PL), y=succ.values, labels={"x": "", "y": "Skuteczność wejść w pole karne %"})
         fig.update_traces(texttemplate="%{y:.0f}%", textposition="inside", insidetextanchor="middle",
