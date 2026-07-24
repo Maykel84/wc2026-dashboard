@@ -1,0 +1,28 @@
+match_id,shot_id,minute,team_id,player_id,x_norm,y_norm,distance_m,body_part,situation,outcome,xg_raw_model_input,xg,assist_player_id,data_source
+WC2026_M99,SH01,29,ENG,p_eng_09,80.3,27.2,25.6,Right Foot,Free Kick,Saved,0.046,0.046,,REAL
+WC2026_M99,SH02,35,NOR,p_nor_09,97.9,28.3,9.1,Header,Regular Play,Saved,0.112,0.112,,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH03,36,NOR,p_nor_21,88.5,19.6,21.9,Left Foot,Regular Play,Goal,0.053,0.053,,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH04,39,NOR,p_nor_07,90.6,22.7,18.3,Left Foot,Set Piece,Off Target,0.086,0.086,,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH05,40,NOR,p_nor_10,77.7,31.9,27.4,Left Foot,Regular Play,Hit Woodwork,0.04,0.04,,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH06,44,NOR,p_nor_07,90.2,41.3,16.5,Left Foot,Fast Break,Blocked,0.126,0.126,,REAL
+WC2026_M99,SH07,45,ENG,p_eng_10,90.4,35.1,14.6,Right Foot,From Corner,Off Target,0.182,0.182,,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH08,47,ENG,p_eng_10,96.3,42.1,11.9,Left Foot,Regular Play,Goal,0.181,0.181,p_eng_18,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH09,48,ENG,p_eng_09,79.5,48.4,29.3,Right Foot,Regular Play,Blocked,0.026,0.026,,REAL
+WC2026_M99,SH10,48,ENG,p_eng_21,75.6,44.1,31.1,Right Foot,Free Kick,Blocked,0.024,0.024,,REAL
+WC2026_M99,SH11,52,ENG,p_eng_07,85.1,36.7,20.1,Left Foot,Regular Play,Off Target,0.093,0.093,,REAL
+WC2026_M99,SH12,53,NOR,p_nor_09,95.7,26.6,11.9,Header,From Corner,Off Target,0.052,0.052,,REAL
+WC2026_M99,SH13,76,NOR,p_nor_14,87.5,26.1,19.2,Right Foot,From Corner,Off Target,0.093,0.093,,REAL
+WC2026_M99,SH14,76,NOR,p_nor_03,97.7,37.8,8.2,Header,From Corner,Saved,0.158,0.158,,REAL
+WC2026_M99,SH15,85,NOR,p_nor_20,89.2,21.5,20.1,Right Foot,Regular Play,Off Target,0.068,0.068,,REAL
+WC2026_M99,SH16,90,ENG,p_eng_10,93.3,39.2,12.8,Header,Regular Play,Saved,0.047,0.047,,REAL
+WC2026_M99,SH17,93,ENG,p_eng_09,93.3,32.1,11.9,Header,From Corner,Saved,0.066,0.066,,REAL
+WC2026_M99,SH18,93,ENG,p_eng_17,76.3,43.3,30.2,Right Foot,From Corner,Saved,0.027,0.027,,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH19,93,ENG,p_eng_10,96.8,33.8,8.2,Right Foot,From Corner,Goal,0.41,0.41,p_eng_17,REAL_OUTCOME_CORRECTED
+WC2026_M99,SH20,104,NOR,p_nor_20,90.3,46.4,19.2,Left Foot,Regular Play,Off Target,0.074,0.074,,REAL
+WC2026_M99,SH21,108,ENG,p_eng_10,86.1,18.1,24.7,Right Foot,Regular Play,Off Target,0.039,0.039,,REAL
+WC2026_M99,SH22,109,NOR,p_nor_06,85.5,41.8,21.0,Right Foot,Regular Play,Saved,0.077,0.077,,REAL
+WC2026_M99,SH23,109,ENG,p_eng_07,90.1,43.0,17.4,Left Foot,Fast Break,Saved,0.107,0.107,,REAL
+WC2026_M99,SH24,110,ENG,p_eng_25,88.9,46.0,20.1,Right Foot,Regular Play,Saved,0.071,0.071,,REAL
+WC2026_M99,SH25,110,ENG,p_eng_07,92.3,35.6,12.8,Right Foot,Regular Play,Blocked,0.228,0.228,,REAL
+WC2026_M99,SH26,114,NOR,p_nor_20,90.0,22.1,19.2,Right Foot,Regular Play,Off Target,0.077,0.077,,REAL
+WC2026_M99,SH27,114,NOR,p_nor_22,94.8,24.8,13.7,Left Foot,From Corner,Off Target,0.143,0.143,,REAL

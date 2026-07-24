@@ -1,0 +1,5 @@
+match_id,half,team_id,ppda,high_press_regains_pct_final_third,pressures,data_source
+WC2026_M98,1H,ESP,12.4,34.2,41,MODELED
+WC2026_M98,1H,BEL,8.1,27.6,29,MODELED
+WC2026_M98,2H,ESP,10.8,36.5,44,MODELED
+WC2026_M98,2H,BEL,7.3,25.1,26,MODELED

@@ -1,0 +1,26 @@
+match_id,shot_id,minute,team_id,player_id,x_norm,y_norm,distance_m,body_part,situation,outcome,xg_raw_model_input,xg,assist_player_id,data_source
+WC2026_M97,SH01,4,FRA,p_fra_11,77.0,40.0,25.6,Right Foot,Regular Play,Saved,0.033,0.033,,REAL
+WC2026_M97,SH02,4,FRA,p_fra_04,99.5,35.0,5.5,Header,From Corner,Blocked,0.337,0.337,,REAL
+WC2026_M97,SH03,10,FRA,p_fra_10,78.5,30.0,24.7,Right Foot,Regular Play,Off Target,0.042,0.042,,REAL
+WC2026_M97,SH04,18,FRA,p_fra_08,94.5,38.0,10.1,Header,Regular Play,Blocked,0.073,0.073,,REAL
+WC2026_M97,SH05,20,FRA,p_fra_08,77.5,32.0,25.6,Left Foot,Regular Play,Off Target,0.039,0.039,,REAL
+WC2026_M97,SH06,21,FRA,p_fra_06,95.5,37.0,9.2,Header,From Corner,Saved,0.105,0.105,,REAL
+WC2026_M97,SH07,28,FRA,p_fra_11,93.8,32.0,11.9,Right Foot,Penalty,Saved,0.79,0.79,,REAL
+WC2026_M97,SH08,33,FRA,p_fra_08,80.0,42.0,22.9,Left Foot,Regular Play,Saved,0.042,0.042,,REAL
+WC2026_M97,SH09,35,FRA,p_fra_10,88.5,30.5,15.5,Right Foot,Regular Play,Blocked,0.136,0.136,,REAL
+WC2026_M97,SH10,36,FRA,p_fra_02,94.5,39.0,10.1,Header,From Corner,Blocked,0.064,0.064,,REAL
+WC2026_M97,SH11,46,FRA,p_fra_07,75.5,30.0,27.4,Right Foot,Regular Play,Blocked,0.03,0.03,,REAL
+WC2026_M97,SH12,47,FRA,p_fra_09,79.0,41.0,23.8,Left Foot,Regular Play,Off Target,0.04,0.04,,REAL
+WC2026_M97,SH13,47,FRA,p_fra_05,74.5,43.0,28.3,Left Foot,Regular Play,Hit Woodwork,0.022,0.022,,REAL
+WC2026_M97,SH17,58,FRA,p_fra_02,89.3,2.1,35.6,Right Foot,Cross,Off Target,0.007,0.007,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH18,59,FRA,p_fra_02,96.3,39.3,10.2,Left Foot,Cross,Saved,0.27,0.27,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH15,60,FRA,p_fra_11,90.0,26.0,16.6,Right Foot,Regular Play,Goal,0.116,0.116,p_fra_10,REAL_EVENT_MODELED_XG
+WC2026_M97,SH23,64,MAR,p_mar_12,86.8,34.0,18.2,Right Foot,Regular Play,Blocked,0.119,0.119,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH16,66,FRA,p_fra_08,89.0,44.0,18.9,Left Foot,Regular Play,Goal,0.088,0.088,p_fra_11,REAL_EVENT_MODELED_XG
+WC2026_M97,SH24,69,MAR,p_mar_12,98.1,35.9,7.2,Right Foot,Counter Attack,Saved,0.457,0.457,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH25,70,MAR,p_mar_12,91.4,58.0,27.6,Head,Set Piece,Off Target,0.001,0.001,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH19,71,FRA,p_fra_02,91.5,46.0,18.1,Head,Regular Play,Blocked,0.01,0.01,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH20,81,FRA,p_fra_06,87.7,44.5,20.2,Head,Regular Play,Blocked,0.006,0.006,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH21,84,FRA,p_fra_02,91.9,35.6,13.2,Right Foot,Counter Attack,Saved,0.217,0.217,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH22,87,FRA,p_fra_08,97.2,56.3,23.6,Right Foot,Set Piece,Off Target,0.022,0.022,,REAL_EVENT_MODELED_XG
+WC2026_M97,SH14,90,MAR,p_mar_02,76.0,44.0,29.0,Right Foot,Free Kick,Off Target,0.025,0.025,,REAL

@@ -1,0 +1,7 @@
+match_id,team_id,set_piece_type,count,goals_scored_from,notes,data_source
+WC2026_M98,ESP,Corner,7,1,1 corner (75′ window) contributed to sustained pressure; none directly assisted a goal.,MODELED
+WC2026_M98,BEL,Corner,2,0,Limited set-piece threat given Belgium's reduced share of possession.,MODELED
+WC2026_M98,ESP,Free Kick (Attacking),11,0,"No direct free-kick goals; De Ketelaere's goal originated from open-play cross, not dead ball.",MODELED
+WC2026_M98,BEL,Free Kick (Attacking),8,0,No direct free-kick goals for Belgium.,MODELED
+WC2026_M98,ESP,Throw-in,18,,Modeled estimate.,MODELED
+WC2026_M98,BEL,Throw-in,14,,Modeled estimate.,MODELED

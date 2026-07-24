@@ -1,0 +1,21 @@
+event_type_id,event_type_name,event_category,data_source
+ET01,Goal,Shot,MODELED
+ET02,Shot Saved,Shot,MODELED
+ET03,Shot Blocked,Shot,MODELED
+ET04,Shot Off Target,Shot,MODELED
+ET05,Yellow Card,Discipline,MODELED
+ET06,Red Card,Discipline,MODELED
+ET07,Substitution,Administrative,MODELED
+ET08,Kickoff,Administrative,MODELED
+ET09,Half Time,Administrative,MODELED
+ET10,Full Time,Administrative,MODELED
+ET11,Big Chance,Attack,MODELED
+ET12,Save,Goalkeeping,MODELED
+ET13,Corner,Set Piece,MODELED
+ET14,Free Kick,Set Piece,MODELED
+ET15,Foul,Discipline,MODELED
+ET16,Offside,Attack,MODELED
+ET17,Injury Stoppage,Administrative,MODELED
+ET18,VAR Review,Administrative,MODELED
+ET19,Penalty Awarded,Attack,MODELED
+ET20,Penalty Missed,Shot,MODELED

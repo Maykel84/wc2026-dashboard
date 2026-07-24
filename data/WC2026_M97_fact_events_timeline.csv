@@ -1,0 +1,37 @@
+match_id,event_id,minute,team_id,event_type_id,event_name,description,data_source
+WC2026_M97,EV01,0,FRA,ET08,Kickoff,Match begins at Gillette Stadium.,REAL
+WC2026_M97,EV02,4,FRA,ET12,Save,Bounou saves Mbappé's early effort.,REAL
+WC2026_M97,EV03,4,FRA,ET03,Shot Blocked,Upamecano's close-range header from a corner is blocked.,REAL
+WC2026_M97,EV04,7,MAR,ET15,Foul,Minor foul in midfield.,MODELED
+WC2026_M97,EV05,12,FRA,ET15,Foul,Foul on Ounahi in the France defensive third.,MODELED
+WC2026_M97,EV06,15,MAR,ET16,Offside,Morocco attacker flagged offside.,MODELED
+WC2026_M97,EV07,18,FRA,ET03,Shot Blocked,Dembélé's header is blocked.,REAL
+WC2026_M97,EV08,21,FRA,ET12,Save,Rabiot's header from a corner is saved by Bounou.,REAL
+WC2026_M97,EV09,23,FRA,ET13,Corner,France's second corner of the half.,MODELED
+WC2026_M97,EV10,25,FRA,ET19,Penalty Awarded,Mazraoui fouls Mbappé in the box; penalty given to France.,REAL
+WC2026_M97,EV11,28,FRA,ET20,Penalty Missed,Mbappé's tame spot-kick is saved by Bounou.,REAL
+WC2026_M97,EV12,30,MAR,ET15,Foul,"Foul on Rabiot, free kick to France.",MODELED
+WC2026_M97,EV13,33,FRA,ET12,Save,Dembélé's effort from the edge of the box is saved.,REAL
+WC2026_M97,EV14,35,FRA,ET03,Shot Blocked,Doué's low drive from 17 yards is blocked.,REAL
+WC2026_M97,EV15,40,FRA,ET16,Offside,France attacker flagged offside.,MODELED
+WC2026_M97,EV16,45,FRA,ET13,Corner,Koundé's header from a corner is blocked (3rd France corner of the half).,REAL
+WC2026_M97,EV17,45,FRA,ET09,Half Time,Half time: France 0-0 Morocco. France lead on xG 1.87-0.04 despite the missed penalty.,REAL
+WC2026_M97,EV18,47,FRA,ET04,Shot Off Target,Digne strikes the crossbar with a swerving left-footed effort.,REAL
+WC2026_M97,EV19,50,MAR,ET15,Foul,Foul on Olise in the final third.,MODELED
+WC2026_M97,EV20,55,FRA,ET13,Corner,France corner from the right.,MODELED
+WC2026_M97,EV21,60,FRA,ET01,Goal,"Mbappé finds the far corner, set up by Doué. 1-0.",REAL
+WC2026_M97,EV22,62,MAR,ET07,Substitution,Sofyan Amrabat replaces Ayyoub Bouaddi.,REAL
+WC2026_M97,EV23,62,MAR,ET07,Substitution,Soufiane Rahimi replaces Bilal El Khannouss.,REAL
+WC2026_M97,EV24,63,MAR,ET05,Yellow Card,Issa Diop booked for serious foul play.,REAL
+WC2026_M97,EV25,66,FRA,ET01,Goal,"Dembélé's shot creeps beyond Bounou to double the lead, assisted by Mbappé. 2-0.",REAL
+WC2026_M97,EV26,68,MAR,ET15,Foul,"Foul on Barcola/Doué area, free kick to France.",MODELED
+WC2026_M97,EV27,71,FRA,ET07,Substitution,Warren Zaïre-Emery replaces Manu Koné (Zaïre-Emery's World Cup debut).,REAL
+WC2026_M97,EV28,74,MAR,ET07,Substitution,Gessime Yassine replaces Brahim Díaz.,REAL
+WC2026_M97,EV29,74,MAR,ET07,Substitution,Zakaria El Ouahdi replaces Anass Salah-Eddine.,REAL
+WC2026_M97,EV30,76,FRA,ET07,Substitution,Bradley Barcola replaces Désiré Doué.,REAL
+WC2026_M97,EV31,76,FRA,ET07,Substitution,Jean-Philippe Mateta replaces Kylian Mbappé.,REAL
+WC2026_M97,EV32,80,FRA,ET13,Corner,France's fifth corner of the match.,MODELED
+WC2026_M97,EV33,85,MAR,ET07,Substitution,Amine Sbaï replaces Chemsdine Talbi.,REAL
+WC2026_M97,EV34,86,FRA,ET07,Substitution,Malo Gusto replaces Jules Koundé.,REAL
+WC2026_M97,EV35,90,MAR,ET04,Shot Off Target,Hakimi's stoppage-time free kick flies over.,REAL
+WC2026_M97,EV36,90,FRA,ET10,Full Time,Full time: France 2-0 Morocco. France advance to face Spain/Belgium in the semi-final.,REAL

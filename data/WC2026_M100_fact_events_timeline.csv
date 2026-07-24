@@ -1,0 +1,28 @@
+match_id,event_id,minute,team_id,event_type_id,event_name,description,data_source
+WC2026_M100,EV01,0,ARG,ET08,Kickoff,Match begins at GEHA Field at Arrowhead Stadium.,REAL
+WC2026_M100,EV02,10,ARG,ET01,Goal,Alexis Mac Allister heads home from Lionel Messi's corner. 1-0 Argentina.,REAL
+WC2026_M100,EV03,15,SUI,ET15,Foul,"Foul on Enzo Fernández, free kick to Argentina.",MODELED
+WC2026_M100,EV04,28,ARG,ET13,Corner,Argentina's second corner of the match.,MODELED
+WC2026_M100,EV05,34,SUI,ET16,Offside,Switzerland attacker flagged offside.,MODELED
+WC2026_M100,EV06,45,ARG,ET09,Half Time,Half time: Argentina 1-0 Switzerland.,MODELED
+WC2026_M100,EV07,52,ARG,ET15,Foul,"Foul on Xhaka, free kick to Switzerland.",MODELED
+WC2026_M100,EV08,60,SUI,ET13,Corner,Switzerland's first corner of the match.,MODELED
+WC2026_M100,EV09,67,SUI,ET01,Goal,Dan Ndoye curls a finish home from a narrow angle. 1-1.,REAL
+WC2026_M100,EV10,72,ARG,ET05,Yellow Card,Leandro Paredes initially shown a yellow card for a foul on Breel Embolo.,REAL
+WC2026_M100,EV11,72,SUI,ET18,VAR Review,VAR review determines Embolo was already going to ground before contact; the card is reassigned from Paredes to Embolo as simulation/diving.,REAL
+WC2026_M100,EV12,72,SUI,ET06,Red Card,Breel Embolo shown a second yellow (reassigned card) and sent off - the first application of IFAB's 'mistaken identity' VAR protocol at a men's World Cup. Switzerland reduced to 10 men.,REAL
+WC2026_M100,EV13,75,ARG,ET11,Big Chance,Argentina press the 10-man Swiss back-line but the final ball is cut out.,MODELED
+WC2026_M100,EV14,78,ARG,ET07,Substitution,Nicolás González replaces Nicolás Tagliafico.,REAL
+WC2026_M100,EV15,85,ARG,ET07,Substitution,Lautaro Martínez replaces Rodrigo De Paul.,REAL
+WC2026_M100,EV16,85,ARG,ET07,Substitution,Gonzalo Montiel replaces Nahuel Molina.,REAL
+WC2026_M100,EV17,90,ARG,ET07,Substitution,"Thiago Almada replaces Alexis Mac Allister (estimated minute/pairing, see README).",MODELED_PLACEHOLDER
+WC2026_M100,EV18,90,ARG,ET10,Full Time,Full time: Argentina 1-1 Switzerland after 90 minutes. Match goes to extra time.,REAL
+WC2026_M100,EV19,90,ARG,ET21,Extra Time Period,Extra time begins.,REAL
+WC2026_M100,EV20,95,SUI,ET12,Save,Kobel keeps Switzerland level early in extra time.,MODELED
+WC2026_M100,EV21,105,ARG,ET21,Extra Time Period,Second period of extra time begins.,REAL
+WC2026_M100,EV22,105,ARG,ET07,Substitution,"Nicolás Otamendi replaces Lisandro Martínez (estimated minute/pairing, see README).",MODELED_PLACEHOLDER
+WC2026_M100,EV23,106,SUI,ET07,Substitution,Rubén Vargas replaces Remo Freuler.,REAL
+WC2026_M100,EV24,110,ARG,ET07,Substitution,"José Manuel López replaces Lionel Messi (estimated minute/pairing, see README).",MODELED_PLACEHOLDER
+WC2026_M100,EV25,112,ARG,ET01,Goal,Julián Álvarez strikes a right-footed rocket into the far upper corner. 2-1 Argentina (extra time).,REAL
+WC2026_M100,EV26,121,ARG,ET01,Goal,Lautaro Martínez turns in the rebound after Thiago Almada's initial shot is kept out. 3-1 Argentina. (120+1'),REAL
+WC2026_M100,EV27,121,ARG,ET23,Full Time (AET),Full time (AET): Argentina 3-1 Switzerland. Argentina advance to face England in the semi-final in Atlanta.,REAL

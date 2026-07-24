@@ -1,0 +1,7 @@
+match_id,team_id,set_piece_type,count,goals_scored_from,notes,data_source
+WC2026_M97,FRA,Corner,5,0,3 corners already on the board by half time; none directly produced a goal.,MIXED
+WC2026_M97,MAR,Corner,2,0,Limited set-piece threat.,MODELED
+WC2026_M97,FRA,Penalty,1,0,25' penalty won (Mazraoui foul on Mbappé); 28' saved by Bounou.,REAL
+WC2026_M97,MAR,Penalty,0,0,No penalties awarded to Morocco.,REAL
+WC2026_M97,FRA,Free Kick (Attacking),10,0,No direct free-kick goals for France.,MODELED
+WC2026_M97,MAR,Free Kick (Attacking),7,0,Hakimi's stoppage-time free kick (90') went over.,MIXED

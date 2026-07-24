@@ -1,0 +1,2 @@
+match_id,competition,season,stage,match_number_wc2026,match_date,kickoff_utc,kickoff_local,venue,venue_broadcast_name,city,country,attendance,referee,referee_country,home_team_id,away_team_id,home_score,away_score,extra_time,penalties,data_source
+WC2026_M100,FIFA World Cup,2026,Quarterfinal,"100 (confirmed, see README)",2026-07-11,01:00 (+1 day),20:00 CDT (11 Jul) / 02:00 CEST (12 Jul),GEHA Field at Arrowhead Stadium,Kansas City Stadium,Kansas City,USA,69045,João Pinheiro,Portugal,ARG,SUI,3,1,Yes,No,REAL

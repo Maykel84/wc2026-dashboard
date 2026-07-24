@@ -1,0 +1,30 @@
+match_id,player_id,player_name,team_id,minutes_played,goals,assists,shots,shots_on_target,xg,key_passes,passes_attempted,passes_completed,tackles,interceptions,clearances,saves,card,touches,data_source
+WC2026_M100,p_arg_01,Emiliano Martínez,ARG,120,0,0,0,0,0,0,113,95,0,0,0,2,,131,MODELED
+WC2026_M100,p_arg_02,Nahuel Molina,ARG,85,0,0,2,0,0.138,0,80,73,1,1,0,0,,89,MODELED
+WC2026_M100,p_arg_03,Cristian Romero,ARG,120,0,0,0,0,0,0,93,77,2,0,3,0,,113,MODELED
+WC2026_M100,p_arg_04,Lisandro Martínez,ARG,105,0,0,0,0,0,0,115,95,3,0,2,0,,145,MODELED
+WC2026_M100,p_arg_05,Nicolás Tagliafico,ARG,78,0,0,0,0,0,0,88,75,3,0,1,0,,113,MODELED
+WC2026_M100,p_arg_06,Leandro Paredes,ARG,120,0,0,0,0,0,0,125,106,0,0,0,0,,154,MODELED
+WC2026_M100,p_arg_07,Rodrigo De Paul,ARG,85,0,0,2,0,0.139,0,93,86,0,2,1,0,,120,MODELED
+WC2026_M100,p_arg_08,Enzo Fernández,ARG,120,0,0,2,0,0.081,0,103,94,3,2,1,0,,132,MODELED
+WC2026_M100,p_arg_09,Alexis Mac Allister,ARG,90,1,0,2,1,0.451,0,92,76,3,0,0,0,,111,REAL
+WC2026_M100,p_arg_10,Lionel Messi,ARG,110,0,1,1,0,0.081,3,90,83,0,1,1,0,,116,REAL
+WC2026_M100,p_arg_11,Julián Álvarez,ARG,120,1,0,2,1,0.197,0,106,94,2,0,0,0,,117,REAL
+WC2026_M100,p_arg_12,Nicolás González,ARG,42,0,0,0,0,0,0,39,36,1,1,2,0,,50,MODELED
+WC2026_M100,p_arg_13,Lautaro Martínez,ARG,35,1,0,3,2,0.74,0,39,32,2,2,2,0,,44,REAL
+WC2026_M100,p_arg_14,Gonzalo Montiel,ARG,35,0,0,0,0,0,0,35,31,1,2,1,0,,42,MODELED
+WC2026_M100,p_arg_15,Thiago Almada,ARG,30,0,1,1,1,0.173,2,31,29,3,0,0,0,,39,REAL
+WC2026_M100,p_arg_16,Nicolás Otamendi,ARG,15,0,0,0,0,0,0,14,12,1,1,2,0,,18,MODELED
+WC2026_M100,p_arg_17,José Manuel López,ARG,10,0,0,0,0,0,0,9,8,1,2,2,0,,11,MODELED
+WC2026_M100,p_sui_01,Gregor Kobel,SUI,120,0,0,0,0,0,0,80,68,0,0,0,2,,104,MODELED
+WC2026_M100,p_sui_02,Denis Zakaria,SUI,120,0,0,0,0,0,0,96,86,2,1,0,0,,113,MODELED
+WC2026_M100,p_sui_03,Nico Elvedi,SUI,120,0,0,0,0,0,0,85,75,2,1,2,0,,107,MODELED
+WC2026_M100,p_sui_04,Manuel Akanji,SUI,120,0,0,0,0,0,0,87,72,3,2,2,0,,106,MODELED
+WC2026_M100,p_sui_05,Ricardo Rodríguez,SUI,120,0,0,0,0,0,0,84,74,2,2,2,0,,104,MODELED
+WC2026_M100,p_sui_06,Djibril Sow,SUI,120,0,0,3,1,0.175,0,87,72,2,0,2,0,,102,MODELED
+WC2026_M100,p_sui_07,Granit Xhaka,SUI,120,0,0,4,1,0.167,0,85,74,0,1,1,0,,108,MODELED
+WC2026_M100,p_sui_08,Remo Freuler,SUI,106,0,0,0,0,0,0,83,76,0,2,0,0,,99,MODELED
+WC2026_M100,p_sui_09,Dan Ndoye,SUI,120,1,0,3,1,0.121,0,91,83,1,1,2,0,,113,REAL
+WC2026_M100,p_sui_10,Breel Embolo,SUI,72,0,0,1,0,0.067,0,59,54,3,0,0,0,"Red (2nd Yellow, VAR reassignment)",70,REAL
+WC2026_M100,p_sui_11,Fabian Rieder,SUI,120,0,0,0,0,0,0,68,59,3,2,0,0,,86,MODELED
+WC2026_M100,p_sui_12,Rubén Vargas,SUI,14,0,0,0,0,0,0,11,9,3,0,1,0,,12,MODELED

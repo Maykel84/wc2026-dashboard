@@ -1,0 +1,13 @@
+match_id,metric,home_value,away_value,data_source
+WC2026_M97,"Possession % (final, modeled from HT split)",54,46,MIXED
+WC2026_M97,Shots,21,4,REAL
+WC2026_M97,Shots on Target,8,1,REAL
+WC2026_M97,xG,3.04,0.14,REAL
+WC2026_M97,Corners (HT actual: 3-1),5,2,MIXED
+WC2026_M97,PPDA (full match avg),9.3,13.9,MODELED
+WC2026_M97,Accurate Passes (HT actual),236,235,REAL
+WC2026_M97,Pass Accuracy %,91.2,88.6,MODELED
+WC2026_M97,Fouls Committed (HT actual: 6-6),9,11,MIXED
+WC2026_M97,Touches in Opposition Box (HT actual: 16-1),26,3,MIXED
+WC2026_M97,Big Chances Created (HT actual: 1-0),3,0,MIXED
+WC2026_M97,Yellow Cards,0,1,REAL

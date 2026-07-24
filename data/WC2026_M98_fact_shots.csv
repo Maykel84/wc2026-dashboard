@@ -1,0 +1,22 @@
+match_id,shot_id,minute,team_id,player_id,x_norm,y_norm,distance_m,body_part,situation,outcome,xg_raw_model_input,xg,assist_player_id,data_source
+WC2026_M98,SH18,5,BEL,p_bel_10,98.8,66.1,32.7,Head,Set Piece,Off Target,0.0,0.0,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH01,10,ESP,p_esp_06,92.0,33.0,11.9,Right Foot,Set Piece,Blocked,0.222,0.222,,REAL
+WC2026_M98,SH02,13,ESP,p_esp_10,89.5,35.5,14.6,Right Foot,Regular Play,Blocked,0.162,0.162,,REAL
+WC2026_M98,SH06,21,ESP,p_esp_02,88.1,24.5,19.4,Head,Counter Attack,Saved,0.008,0.008,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH07,23,ESP,p_esp_09,97.0,30.7,8.7,Left Foot,Set Piece,Saved,0.361,0.361,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH08,25,ESP,p_esp_11,90.7,49.1,20.8,Head,Set Piece,Off Target,0.005,0.005,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH09,29,ESP,p_esp_09,99.5,12.0,22.7,Head,Set Piece,Off Target,0.002,0.002,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH03,30,ESP,p_esp_07,101.5,32.0,4.5,Right Foot,Rebound,Goal,0.681,0.681,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH19,31,BEL,p_bel_11,91.2,38.3,14.5,Head,Counter Attack,Saved,0.032,0.032,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH10,35,ESP,p_esp_07,97.4,27.0,10.3,Head,Counter Attack,Saved,0.076,0.076,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH20,38,BEL,p_bel_06,85.2,48.3,24.4,Right Foot,Set Piece,Off Target,0.043,0.043,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH04,41,BEL,p_bel_11,99.5,35.5,5.8,Head,Cross,Goal,0.325,0.325,p_bel_04,REAL_EVENT_MODELED_XG
+WC2026_M98,SH11,43,ESP,p_esp_07,82.5,29.9,22.9,Left Foot,Regular Play,Blocked,0.066,0.066,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH12,58,ESP,p_esp_12,87.8,48.5,22.5,Right Foot,Counter Attack,Off Target,0.05,0.05,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH13,66,ESP,p_esp_05,87.4,24.7,19.9,Head,Regular Play,Blocked,0.007,0.007,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH21,68,BEL,p_bel_14,84.6,36.9,20.6,Right Foot,Regular Play,Blocked,0.088,0.088,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH14,72,ESP,p_esp_06,88.6,31.3,16.6,Left Foot,Counter Attack,Saved,0.141,0.141,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH15,76,ESP,p_esp_02,89.4,11.8,27.1,Head,Cross,Off Target,0.001,0.001,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH16,79,ESP,p_esp_06,90.7,33.9,14.3,Head,Regular Play,Saved,0.035,0.035,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH17,84,ESP,p_esp_12,93.2,63.6,31.9,Left Foot,Regular Play,Off Target,0.009,0.009,,REAL_EVENT_MODELED_XG
+WC2026_M98,SH05,88,ESP,p_esp_14,100.5,34.5,5.0,Right Foot,Rebound,Goal,0.648,0.648,,REAL_EVENT_MODELED_XG

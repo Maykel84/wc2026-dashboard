@@ -1,0 +1,13 @@
+match_id,metric,home_value,away_value,data_source
+WC2026_M99,Possession %,48,52,REAL
+WC2026_M99,Shots,13,14,REAL
+WC2026_M99,Shots on Target,4,8,REAL
+WC2026_M99,xG,0.77,0.96,REAL
+WC2026_M99,Corners,7,4,REAL
+WC2026_M99,PPDA (full match avg),12.6,10.2,MODELED
+WC2026_M99,Accurate Passes,492,569,REAL
+WC2026_M99,Pass Accuracy %,85.0,90.6,REAL
+WC2026_M99,Fouls Committed,10,8,REAL
+WC2026_M99,Touches in Opposition Box,31,31,REAL
+WC2026_M99,Big Chances Created,1,2,REAL
+WC2026_M99,Yellow Cards,1,0,REAL

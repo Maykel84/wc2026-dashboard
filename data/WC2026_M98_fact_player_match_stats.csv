@@ -1,0 +1,30 @@
+match_id,player_id,player_name,team_id,minutes_played,goals,assists,shots,shots_on_target,xg,key_passes,passes_attempted,passes_completed,tackles,interceptions,clearances,saves,card,touches,data_source
+WC2026_M98,p_esp_01,Unai Simón,ESP,90,0,0,0,0,0,0,93,82,0,0,0,5,,115,MODELED
+WC2026_M98,p_esp_02,Pedro Porro,ESP,90,0,0,2,1,0.075,0,75,62,0,0,2,0,,88,MODELED
+WC2026_M98,p_esp_03,Pau Cubarsí,ESP,90,0,0,0,0,0,0,88,76,1,1,1,0,Yellow,102,REAL
+WC2026_M98,p_esp_04,Aymeric Laporte,ESP,90,0,0,0,0,0,0,68,63,3,1,4,0,Yellow,83,REAL
+WC2026_M98,p_esp_05,Marc Cucurella,ESP,90,0,0,1,0,0.045,0,68,58,3,2,2,0,,86,MODELED
+WC2026_M98,p_esp_06,Rodri,ESP,90,0,0,3,2,0.21,0,76,70,3,0,0,0,,97,MODELED
+WC2026_M98,p_esp_07,Fabián Ruiz,ESP,55,1,0,3,2,0.336,0,62,58,3,1,2,0,,76,REAL
+WC2026_M98,p_esp_08,Lamine Yamal,ESP,90,0,0,0,0,0,6,71,59,3,0,0,0,,78,REAL
+WC2026_M98,p_esp_09,Dani Olmo,ESP,86,0,0,2,1,0.085,0,68,57,1,2,1,0,,88,MODELED
+WC2026_M98,p_esp_10,Álex Baena,ESP,55,0,0,1,0,0.05,0,62,53,3,0,0,0,,79,MODELED
+WC2026_M98,p_esp_11,Mikel Oyarzabal,ESP,90,0,0,1,0,0.015,0,89,79,0,0,0,0,,100,MODELED
+WC2026_M98,p_esp_12,Pedri,ESP,35,0,0,2,0,0.04,0,39,36,0,2,0,0,,46,MODELED
+WC2026_M98,p_esp_13,Ferran Torres,ESP,35,0,0,0,0,0,0,32,29,3,1,0,0,,40,MODELED
+WC2026_M98,p_esp_14,Mikel Merino,ESP,4,1,0,1,1,0.301,0,4,4,0,2,0,0,,5,REAL
+WC2026_M98,p_bel_01,Thibaut Courtois,BEL,72,0,0,0,0,0,0,41,34,0,0,0,3,,50,MODELED
+WC2026_M98,p_bel_02,Brandon Mechele,BEL,90,0,0,0,0,0,0,43,40,1,1,4,0,,51,MODELED
+WC2026_M98,p_bel_03,Nathan Ngoy,BEL,90,0,0,0,0,0,0,46,38,0,2,3,0,,59,MODELED
+WC2026_M98,p_bel_04,Timothy Castagne,BEL,90,0,1,0,0,0,0,42,37,1,2,0,0,,52,REAL
+WC2026_M98,p_bel_05,Maxim De Cuyper,BEL,61,0,0,0,0,0,0,32,28,3,2,0,0,,39,MODELED
+WC2026_M98,p_bel_06,Youri Tielemans,BEL,90,0,0,1,0,0.02,0,43,40,1,2,1,0,,48,MODELED
+WC2026_M98,p_bel_07,Nicolas Raskin,BEL,90,0,0,0,0,0,0,42,38,3,1,1,0,,50,MODELED
+WC2026_M98,p_bel_08,Kevin De Bruyne,BEL,86,0,0,0,0,0,0,41,37,0,0,2,0,,50,MODELED
+WC2026_M98,p_bel_09,Leandro Trossard,BEL,60,0,0,0,0,0,0,34,29,1,1,0,0,,42,MODELED
+WC2026_M98,p_bel_10,Jérémy Doku,BEL,90,0,0,1,0,0.01,0,55,47,1,1,1,0,,69,MODELED
+WC2026_M98,p_bel_11,Charles De Ketelaere,BEL,90,1,0,2,2,0.167,0,52,43,1,1,2,0,Yellow,65,REAL
+WC2026_M98,p_bel_12,Senne Lammens,BEL,18,0,0,0,0,0,0,8,7,0,0,0,2,,9,MODELED
+WC2026_M98,p_bel_13,Joaquin Seys,BEL,29,0,0,0,0,0,0,16,13,3,0,2,0,,18,MODELED
+WC2026_M98,p_bel_14,Romelu Lukaku,BEL,30,0,0,1,0,0.033,0,16,13,0,1,2,0,,20,MODELED
+WC2026_M98,p_bel_15,Alexis Saelemaekers,BEL,4,0,0,0,0,0,0,2,2,3,2,2,0,,2,MODELED

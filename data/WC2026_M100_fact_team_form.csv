@@ -1,0 +1,11 @@
+match_id,team_id,date,opponent,competition_stage,result,score,venue_type,data_source
+WC2026_M100,ARG,2026-07-07,Egypt,Round of 16,W,3-2,Home,REAL
+WC2026_M100,ARG,2026-07-03,Cape Verde,Round of 32,W,3-2,Away,REAL
+WC2026_M100,ARG,2026-06-27,Jordan,Group Stage,W,3-1,Home,REAL
+WC2026_M100,ARG,2026-06-22,Austria,Group Stage,W,2-0,Home,REAL
+WC2026_M100,ARG,2026-06-16,Algeria,Group Stage,W,3-0,Home,REAL
+WC2026_M100,SUI,2026-07-07,Colombia,Round of 16,D (W pens),0-0 (4-3 pens),Away,REAL
+WC2026_M100,SUI,2026-07-02,Algeria,Round of 32,W,2-0,Away,REAL
+WC2026_M100,SUI,2026-06-24,Canada,Group Stage,W,2-1,Home,REAL
+WC2026_M100,SUI,2026-06-18,Bosnia and Herzegovina,Group Stage,W,4-1,Home,REAL
+WC2026_M100,SUI,2026-06-13,Qatar,Group Stage,D,1-1,Away,REAL

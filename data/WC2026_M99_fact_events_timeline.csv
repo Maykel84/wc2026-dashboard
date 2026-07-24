@@ -1,0 +1,38 @@
+match_id,event_id,minute,team_id,event_type_id,event_name,description,data_source
+WC2026_M99,EV01,0,NOR,ET08,Kickoff,Match begins at Hard Rock Stadium.,REAL
+WC2026_M99,EV02,12,ENG,ET15,Foul,"Foul on Ødegaard, free kick to Norway.",MODELED
+WC2026_M99,EV03,20,NOR,ET15,Foul,Foul on Bellingham in midfield.,MODELED
+WC2026_M99,EV04,25,ENG,ET13,Corner,England's first corner of the match.,MODELED
+WC2026_M99,EV05,29,ENG,ET12,Save,Kane's free kick from 28 yards is saved.,REAL
+WC2026_M99,EV06,33,NOR,ET16,Offside,Norway attacker flagged offside.,MODELED
+WC2026_M99,EV07,35,NOR,ET12,Save,Haaland's close-range header is saved by Pickford.,REAL
+WC2026_M99,EV08,36,NOR,ET01,Goal,Andreas Schjelderup sends a cross-shot over Pickford from a tight angle. 1-0 Norway.,REAL
+WC2026_M99,EV09,39,NOR,ET04,Shot Off Target,Sørloth's set-piece effort goes wide.,REAL
+WC2026_M99,EV10,40,NOR,ET04,Shot Off Target,Ødegaard's shot from 30 yards hits the frame of the goal.,REAL
+WC2026_M99,EV11,45,ENG,ET04,Shot Off Target,Bellingham's first effort from a corner goes off target.,REAL
+WC2026_M99,EV12,45,ENG,ET09,Half Time,Half time: Norway 1-0 England (score before Bellingham's stoppage-time equalizer is confirmed on review).,MODELED
+WC2026_M99,EV13,47,ENG,ET01,Goal,"Jude Bellingham latches onto Anthony Gordon's pass, drives into the box and fires low into the corner. 1-1. (45+2')",REAL
+WC2026_M99,EV14,47,NOR,ET18,VAR Review,Norway claim Bellingham's equalizer should be disallowed (goal kick allegedly struck an overhead camera cable); FIFA rules the ball's sensor detected no contact and the goal stands.,REAL
+WC2026_M99,EV15,57,NOR,ET22,Goal Disallowed (VAR),Torbjørn Heggem has the ball in the net but it's ruled out for a foul by Haaland on Anderson.,REAL
+WC2026_M99,EV16,58,NOR,ET05,Yellow Card,Kristoffer Ajer booked for protesting the referee's decision.,REAL
+WC2026_M99,EV17,60,NOR,ET07,Substitution,Fredrik Aursnes replaces Julian Ryerson.,REAL
+WC2026_M99,EV18,65,NOR,ET11,Big Chance,Sørloth fails to square to an unmarked Haaland during a 2-v-1 counter-attack.,REAL
+WC2026_M99,EV19,68,NOR,ET07,Substitution,Antonio Nusa replaces Andreas Schjelderup.,REAL
+WC2026_M99,EV20,68,NOR,ET07,Substitution,Oscar Bobb replaces Alexander Sørloth.,REAL
+WC2026_M99,EV21,72,ENG,ET15,Foul,"Foul on Rice/Eze area, free kick to Norway.",MODELED
+WC2026_M99,EV22,86,ENG,ET07,Substitution,Djed Spence replaces Nico O'Reilly.,REAL
+WC2026_M99,EV23,87,ENG,ET11,Big Chance,Saka's wicked low cross across goal finds no England takers.,REAL
+WC2026_M99,EV24,89,ENG,ET07,Substitution,Morgan Rogers replaces Ezri Konsa.,REAL
+WC2026_M99,EV25,90,NOR,ET10,Full Time,Full time: Norway 1-1 England after 90 minutes. Match goes to extra time.,REAL
+WC2026_M99,EV26,90,NOR,ET21,Extra Time Period,Extra time begins.,REAL
+WC2026_M99,EV27,90,NOR,ET07,Substitution,Leo Østigård replaces Torbjørn Heggem.,REAL
+WC2026_M99,EV28,90,NOR,ET07,Substitution,Marcus Holmgren Pedersen replaces David Møller Wolfe.,REAL
+WC2026_M99,EV29,93,ENG,ET01,Goal,Bellingham reacts quickest to Nyland's spill from substitute Morgan Rogers' long-range effort to force the ball in. 1-2 England (extra time).,REAL
+WC2026_M99,EV30,105,NOR,ET21,Extra Time Period,Second period of extra time begins.,REAL
+WC2026_M99,EV31,105,NOR,ET07,Substitution,Jørgen Strand Larsen replaces Erling Haaland.,REAL
+WC2026_M99,EV32,109,NOR,ET12,Save,Berg's shot from 23 yards is saved.,REAL
+WC2026_M99,EV33,109,ENG,ET12,Save,Saka's fast-break effort is saved.,REAL
+WC2026_M99,EV34,110,ENG,ET12,Save,Spence's low drive is saved.,REAL
+WC2026_M99,EV35,110,ENG,ET03,Shot Blocked,Saka's follow-up effort is blocked.,REAL
+WC2026_M99,EV36,111,ENG,ET07,Substitution,Dan Burn replaces goalscorer Jude Bellingham late in extra time.,REAL
+WC2026_M99,EV37,120,ENG,ET23,Full Time (AET),Full time (AET): Norway 1-2 England. England advance to face Argentina in Atlanta.,REAL

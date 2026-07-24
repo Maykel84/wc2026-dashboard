@@ -1,0 +1,7 @@
+phase_id,phase_name,phase_description,data_source
+PH01,Attack,"Team in possession, building/executing an attacking sequence",MODELED
+PH02,Defense,"Team out of possession, organized defensive shape",MODELED
+PH03,Transition (Off->Def),"Team loses possession, immediate counter-press/recovery",MODELED
+PH04,Transition (Def->Off),"Team wins possession, immediate counter-attack",MODELED
+PH05,Set Piece Attack,Team in possession at a dead-ball restart,MODELED
+PH06,Set Piece Defense,"Team out of possession, defending a dead-ball restart",MODELED

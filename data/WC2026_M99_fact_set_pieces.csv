@@ -1,0 +1,7 @@
+match_id,team_id,set_piece_type,count,goals_scored_from,notes,data_source
+WC2026_M99,NOR,Corner,7,0,7 corners (REAL count) but none produced a goal.,MIXED
+WC2026_M99,ENG,Corner,4,1,Bellingham's extra-time winner (93') originated from a corner sequence.,MIXED
+WC2026_M99,NOR,Hit Woodwork,1,0,Ødegaard's 40th-minute effort struck the frame of the goal (REAL box-score stat).,REAL
+WC2026_M99,ENG,Hit Woodwork,0,0,No England woodwork strikes.,REAL
+WC2026_M99,NOR,Free Kick (Attacking),9,0,No direct free-kick goals for Norway.,MODELED
+WC2026_M99,ENG,Free Kick (Attacking),7,0,Kane's early free kick (29') was saved; no direct free-kick goals.,MIXED

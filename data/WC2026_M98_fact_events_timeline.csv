@@ -1,0 +1,37 @@
+match_id,event_id,minute,team_id,event_type_id,event_name,description,data_source
+WC2026_M98,EV01,0,ESP,ET08,Kickoff,Match begins at SoFi Stadium.,REAL
+WC2026_M98,EV02,5,ESP,ET15,Foul,Minor foul in midfield.,MODELED
+WC2026_M98,EV03,8,BEL,ET15,Foul,Minor foul in midfield.,MODELED
+WC2026_M98,EV04,10,ESP,ET03,Shot Blocked,Rodri's set-piece effort from 13 yards is blocked.,REAL
+WC2026_M98,EV05,13,ESP,ET03,Shot Blocked,Álex Baena's low effort from 16 yards is blocked.,REAL
+WC2026_M98,EV06,18,BEL,ET16,Offside,Belgium attacker flagged offside.,MODELED
+WC2026_M98,EV07,22,ESP,ET13,Corner,Spain corner from the right.,MODELED
+WC2026_M98,EV08,25,BEL,ET15,Foul,"Foul on Rodri, free kick to Spain.",MODELED
+WC2026_M98,EV09,30,ESP,ET01,Goal,Fabián Ruiz slams home the rebound after Courtois fails to control the initial save. 1-0.,REAL
+WC2026_M98,EV10,35,ESP,ET16,Offside,Spain attacker flagged offside.,MODELED
+WC2026_M98,EV11,38,ESP,ET13,Corner,Spain corner from the left.,MODELED
+WC2026_M98,EV12,41,BEL,ET01,Goal,Charles De Ketelaere heads in Timothy Castagne's cross to level the match. 1-1.,REAL
+WC2026_M98,EV13,41,BEL,ET05,Yellow Card,Charles De Ketelaere booked shortly after his equalizer.,REAL
+WC2026_M98,EV14,43,ESP,ET05,Yellow Card,Pau Cubarsí booked for a tactical foul.,REAL
+WC2026_M98,EV15,45,ESP,ET09,Half Time,Half time: Spain 1-1 Belgium.,MODELED
+WC2026_M98,EV16,47,ESP,ET11,Big Chance,"Lamine Yamal released by Cubarsí, denied one-on-one by Courtois.",REAL
+WC2026_M98,EV17,50,BEL,ET15,Foul,Foul on Yamal in the final third.,MODELED
+WC2026_M98,EV18,55,ESP,ET07,Substitution,Pedri replaces Fabián Ruiz.,REAL
+WC2026_M98,EV19,55,ESP,ET07,Substitution,Ferran Torres replaces Álex Baena.,REAL
+WC2026_M98,EV20,55,BEL,ET11,Big Chance,Doku-De Bruyne one-two sends De Cuyper clear; he fires into the side netting.,REAL
+WC2026_M98,EV21,60,BEL,ET07,Substitution,"Romelu Lukaku replaces Leandro Trossard (unconfirmed pairing, see README).",MODELED_PLACEHOLDER
+WC2026_M98,EV22,61,BEL,ET07,Substitution,Joaquin Seys replaces Maxim De Cuyper.,REAL
+WC2026_M98,EV23,61,ESP,ET12,Save,"Lamine Yamal's effort beaten away by Courtois, who also saves from Oyarzabal.",REAL
+WC2026_M98,EV24,65,ESP,ET15,Foul,"Foul on De Bruyne, free kick to Belgium.",MODELED
+WC2026_M98,EV25,68,BEL,ET04,Shot Off Target,Doku curls an effort wide from distance.,MODELED
+WC2026_M98,EV26,72,BEL,ET17,Injury Stoppage,Thibaut Courtois forced off in tears with an apparent thigh injury.,REAL
+WC2026_M98,EV27,72,BEL,ET07,Substitution,Senne Lammens replaces Thibaut Courtois (injury).,REAL
+WC2026_M98,EV28,75,ESP,ET13,Corner,Spain win a corner after sustained pressure.,MODELED
+WC2026_M98,EV29,78,BEL,ET15,Foul,Belgium concede a foul in their defensive third.,MODELED
+WC2026_M98,EV30,80,ESP,ET04,Shot Off Target,Yamal curls an effort just wide.,MODELED
+WC2026_M98,EV31,82,ESP,ET13,Corner,Spain's fifth corner of the match.,MODELED
+WC2026_M98,EV32,86,ESP,ET07,Substitution,Mikel Merino replaces Dani Olmo.,REAL
+WC2026_M98,EV33,86,BEL,ET07,Substitution,Alexis Saelemaekers replaces Kevin De Bruyne.,REAL
+WC2026_M98,EV34,88,ESP,ET01,Goal,Merino scores with his second touch after Lammens spills Cubarsí's low shot. 2-1.,REAL
+WC2026_M98,EV35,90,ESP,ET05,Yellow Card,Aymeric Laporte booked for time-wasting/tactical foul in stoppage time.,REAL
+WC2026_M98,EV36,90,ESP,ET10,Full Time,Full time: Spain 2-1 Belgium. Spain advance to face France in the semi-final.,REAL

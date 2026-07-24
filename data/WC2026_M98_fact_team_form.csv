@@ -1,0 +1,11 @@
+match_id,team_id,date,opponent,competition_stage,result,score,venue_type,data_source
+WC2026_M98,ESP,2026-07-06,Portugal,Round of 16,W,1-0,Away,REAL
+WC2026_M98,ESP,2026-07-02,Austria,Round of 32,W,3-0,Home,REAL
+WC2026_M98,ESP,2026-06-26,Uruguay,Group Stage,W,1-0,Away,REAL
+WC2026_M98,ESP,2026-06-21,Saudi Arabia,Group Stage,W,4-0,Home,REAL
+WC2026_M98,ESP,2026-06-15,Cape Verde,Group Stage,D,0-0,Home,REAL
+WC2026_M98,BEL,2026-07-06,United States,Round of 16,W,4-1,Away,REAL
+WC2026_M98,BEL,2026-07-01,Senegal,Round of 32,W,3-2,Home,REAL
+WC2026_M98,BEL,2026-06-26,New Zealand,Group Stage,W,5-1,Away,REAL
+WC2026_M98,BEL,2026-06-21,Iran,Group Stage,D,0-0,Home,REAL
+WC2026_M98,BEL,2026-06-15,Egypt,Group Stage,D,1-1,Home,REAL

@@ -1,0 +1,53 @@
+player_id,player_name,team_id,position,match_role,shirt_number_placeholder,data_source
+p_fra_01,Mike Maignan,FRA,GK,Starter,1,REAL
+p_fra_02,Jules Koundé,FRA,DEF,Starter (off 86'),2,REAL
+p_fra_03,William Saliba,FRA,DEF,Starter,3,REAL
+p_fra_04,Dayot Upamecano,FRA,DEF,Starter,4,REAL
+p_fra_05,Lucas Digne,FRA,DEF,Starter,5,REAL
+p_fra_06,Adrien Rabiot,FRA,MID,Starter,6,REAL
+p_fra_07,Manu Koné,FRA,MID,Starter (off 71'),7,REAL
+p_fra_08,Ousmane Dembélé,FRA,FWD,Starter,8,REAL
+p_fra_09,Michael Olise,FRA,MID,Starter,9,REAL
+p_fra_10,Désiré Doué,FRA,FWD,Starter (off 76'),10,REAL
+p_fra_11,Kylian Mbappé,FRA,FWD,Starter (off 76'),11,REAL
+p_fra_12,Warren Zaïre-Emery,FRA,MID,"Substitute (used, 71')",12,REAL
+p_fra_13,Bradley Barcola,FRA,FWD,"Substitute (used, 76')",13,REAL
+p_fra_14,Jean-Philippe Mateta,FRA,FWD,"Substitute (used, 76')",14,REAL
+p_fra_15,Malo Gusto,FRA,DEF,"Substitute (used, 86')",15,REAL
+p_fra_16,N'Golo Kanté,FRA,MID,Substitute (unused),16,REAL
+p_fra_17,Brice Samba,FRA,GK,Substitute (unused),17,REAL
+p_fra_18,Lucas Hernández,FRA,DEF,Substitute (unused),18,REAL
+p_fra_19,Maghnes Akliouche,FRA,FWD,"Substitute (unused, see README)",19,MODELED_PLACEHOLDER
+p_fra_20,Marcus Thuram,FRA,FWD,Substitute (unused),20,REAL
+p_fra_21,Maxence Lacroix,FRA,DEF,Substitute (unused),21,REAL
+p_fra_22,Ibrahima Konaté,FRA,DEF,Substitute (unused),22,REAL
+p_fra_23,Aurélien Tchouaméni,FRA,MID,Substitute (unused),23,REAL
+p_fra_24,Robin Risser,FRA,GK,Substitute (unused),24,REAL
+p_fra_25,Rayan Cherki,FRA,MID,Substitute (unused),25,REAL
+p_fra_26,Théo Hernández,FRA,DEF,Substitute (unused),26,REAL
+p_mar_01,Yassine Bounou,MAR,GK,Starter,1,REAL
+p_mar_02,Achraf Hakimi,MAR,DEF,Starter,2,REAL
+p_mar_03,Noussair Mazraoui,MAR,DEF,Starter,3,REAL
+p_mar_04,Issa Diop,MAR,DEF,Starter,4,REAL
+p_mar_05,Anass Salah-Eddine,MAR,DEF,Starter (off 74'),5,REAL
+p_mar_06,Neil El Aynaoui,MAR,MID,Starter,6,REAL
+p_mar_07,Ayyoub Bouaddi,MAR,MID,Starter (off 62'),7,REAL
+p_mar_08,Brahim Díaz,MAR,MID,Starter (off 74'),8,REAL
+p_mar_09,Azzedine Ounahi,MAR,MID,Starter,9,REAL
+p_mar_10,Chemsdine Talbi,MAR,FWD,Starter (off 85'),10,REAL
+p_mar_11,Bilal El Khannouss,MAR,FWD,Starter (off 62'),11,REAL
+p_mar_12,Sofyan Amrabat,MAR,MID,"Substitute (used, 62')",12,REAL
+p_mar_13,Soufiane Rahimi,MAR,FWD,"Substitute (used, 62')",13,REAL
+p_mar_14,Gessime Yassine,MAR,MID,"Substitute (used, 74')",14,REAL
+p_mar_15,Zakaria El Ouahdi,MAR,DEF,"Substitute (used, 74')",15,REAL
+p_mar_16,Amine Sbaï,MAR,FWD,"Substitute (used, 85')",16,REAL
+p_mar_17,Ahmed Reda Tagnaouti,MAR,GK,Substitute (unused),17,REAL
+p_mar_18,Marwane Saadane,MAR,DEF,Substitute (unused),18,REAL
+p_mar_19,Chadi Riad,MAR,DEF,Substitute (unused),19,REAL
+p_mar_20,Ismael Saibari,MAR,MID,"Substitute (unused - injured, per Sky Sports)",20,REAL
+p_mar_21,Youssef Belammari,MAR,FWD,Substitute (unused),21,REAL
+p_mar_22,Ayoub El Kaabi,MAR,FWD,Substitute (unused),22,REAL
+p_mar_23,Munir El Kajoui,MAR,GK,Substitute (unused),23,REAL
+p_mar_24,Samir El Mourabet,MAR,DEF,Substitute (unused),24,REAL
+p_mar_25,Redouane Halhal,MAR,MID,Substitute (unused),25,REAL
+p_mar_26,Ayoube Amaimouni-Echghouyab,MAR,FWD,Substitute (unused),26,REAL

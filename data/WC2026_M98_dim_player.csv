@@ -1,0 +1,53 @@
+player_id,player_name,team_id,position,match_role,shirt_number_placeholder,data_source
+p_esp_01,Unai Simón,ESP,GK,Starter,1,REAL
+p_esp_02,Pedro Porro,ESP,DEF,Starter,2,REAL
+p_esp_03,Pau Cubarsí,ESP,DEF,Starter,3,REAL
+p_esp_04,Aymeric Laporte,ESP,DEF,Starter,4,REAL
+p_esp_05,Marc Cucurella,ESP,DEF,Starter,5,REAL
+p_esp_06,Rodri,ESP,MID,Starter,6,REAL
+p_esp_07,Fabián Ruiz,ESP,MID,Starter,7,REAL
+p_esp_08,Lamine Yamal,ESP,FWD,Starter,8,REAL
+p_esp_09,Dani Olmo,ESP,MID,Starter,9,REAL
+p_esp_10,Álex Baena,ESP,MID,Starter,10,REAL
+p_esp_11,Mikel Oyarzabal,ESP,FWD,Starter,11,REAL
+p_esp_12,Pedri,ESP,MID,"Substitute (used, 55')",12,REAL
+p_esp_13,Ferran Torres,ESP,FWD,"Substitute (used, 55')",13,REAL
+p_esp_14,Mikel Merino,ESP,MID,"Substitute (used, 86')",14,REAL
+p_esp_15,Eric García,ESP,DEF,Substitute (unused),15,REAL
+p_esp_16,Joan García,ESP,GK,Substitute (unused),16,REAL
+p_esp_17,Alejandro Grimaldo,ESP,DEF,Substitute (unused),17,REAL
+p_esp_18,Víctor Muñoz,ESP,MID,Substitute (unused),18,REAL
+p_esp_19,Gavi,ESP,MID,Substitute (unused),19,REAL
+p_esp_20,Yéremy Pino,ESP,FWD,Substitute (unused),20,REAL
+p_esp_21,Marc Pubill,ESP,DEF,Substitute (unused),21,REAL
+p_esp_22,Borja Iglesias,ESP,FWD,Substitute (unused),22,REAL
+p_esp_23,Marcos Llorente,ESP,MID,Substitute (unused),23,REAL
+p_esp_24,Nico Williams,ESP,FWD,Substitute (unused),24,REAL
+p_esp_25,Martín Zubimendi,ESP,MID,Substitute (unused),25,REAL
+p_esp_26,David Raya,ESP,GK,Substitute (unused),26,REAL
+p_bel_01,Thibaut Courtois,BEL,GK,"Starter (off 72', injury)",1,REAL
+p_bel_02,Brandon Mechele,BEL,DEF,Starter,2,REAL
+p_bel_03,Nathan Ngoy,BEL,DEF,Starter,3,REAL
+p_bel_04,Timothy Castagne,BEL,DEF,Starter,4,REAL
+p_bel_05,Maxim De Cuyper,BEL,DEF,Starter (off 61'),5,REAL
+p_bel_06,Youri Tielemans,BEL,MID,Starter,6,REAL
+p_bel_07,Nicolas Raskin,BEL,MID,Starter,7,REAL
+p_bel_08,Kevin De Bruyne,BEL,MID,Starter (off 86'),8,REAL
+p_bel_09,Leandro Trossard,BEL,FWD,"Starter (off 60', unconfirmed)",9,MODELED_PLACEHOLDER
+p_bel_10,Jérémy Doku,BEL,FWD,Starter,10,REAL
+p_bel_11,Charles De Ketelaere,BEL,FWD,Starter,11,REAL
+p_bel_12,Senne Lammens,BEL,GK,"Substitute (used, 72')",12,REAL
+p_bel_13,Joaquin Seys,BEL,DEF,"Substitute (used, 61')",13,REAL
+p_bel_14,Romelu Lukaku,BEL,FWD,"Substitute (used, 60')",14,REAL
+p_bel_15,Alexis Saelemaekers,BEL,MID,"Substitute (used, 86')",15,REAL
+p_bel_16,Mike Penders,BEL,GK,Substitute (unused),16,REAL
+p_bel_17,Thomas Meunier,BEL,DEF,Substitute (unused),17,REAL
+p_bel_18,Zeno Debast,BEL,DEF,Substitute (unused),18,REAL
+p_bel_19,Koni De Winter,BEL,DEF,Substitute (unused),19,REAL
+p_bel_20,Arthur Theate,BEL,DEF,Substitute (unused),20,REAL
+p_bel_21,Amadou Onana,BEL,MID,Substitute (unused),21,REAL
+p_bel_22,Hans Vanaken,BEL,MID,Substitute (unused),22,REAL
+p_bel_23,Axel Witsel,BEL,MID,Substitute (unused),23,REAL
+p_bel_24,Matias Fernandez-Pardo,BEL,FWD,Substitute (unused),24,REAL
+p_bel_25,Dodi Lukébakio,BEL,FWD,Substitute (unused),25,REAL
+p_bel_26,Diego Moreira,BEL,FWD,Substitute (unused),26,REAL

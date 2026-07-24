@@ -1,0 +1,7 @@
+match_id,team_id,set_piece_type,count,goals_scored_from,notes,data_source
+WC2026_M100,ARG,Corner,6,1,Mac Allister's opener (10') came from a Messi corner (REAL).,MIXED
+WC2026_M100,SUI,Corner,2,0,"2 corners (REAL count), none produced a goal.",REAL
+WC2026_M100,ARG,Hit Woodwork,0,0,No Argentina woodwork strikes recorded.,MODELED
+WC2026_M100,SUI,Hit Woodwork,0,0,No Switzerland woodwork strikes recorded.,MODELED
+WC2026_M100,ARG,Free Kick (Attacking),8,0,No direct free-kick goals for Argentina.,MODELED
+WC2026_M100,SUI,Free Kick (Attacking),6,0,No direct free-kick goals for Switzerland.,MODELED

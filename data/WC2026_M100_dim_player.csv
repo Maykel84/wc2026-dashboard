@@ -1,0 +1,46 @@
+player_id,player_name,team_id,position,match_role,shirt_number_placeholder,data_source
+p_arg_01,Emiliano Martínez,ARG,GK,Starter,23,REAL
+p_arg_02,Nahuel Molina,ARG,DEF,Starter (off 85'),26,REAL
+p_arg_03,Cristian Romero,ARG,DEF,Starter,13,REAL
+p_arg_04,Lisandro Martínez,ARG,DEF,Starter (off 105'),25,REAL
+p_arg_05,Nicolás Tagliafico,ARG,DEF,Starter (off 78'),3,REAL
+p_arg_06,Leandro Paredes,ARG,MID,Starter (see README - VAR card reassignment),5,REAL
+p_arg_07,Rodrigo De Paul,ARG,MID,Starter (off 85'),7,REAL
+p_arg_08,Enzo Fernández,ARG,MID,Starter,24,REAL
+p_arg_09,Alexis Mac Allister,ARG,MID,"Starter (off 90', see README)",20,REAL
+p_arg_10,Lionel Messi,ARG,FWD,"Starter (captain, off 110', see README)",10,REAL
+p_arg_11,Julián Álvarez,ARG,FWD,Starter,9,REAL
+p_arg_12,Nicolás González,ARG,FWD,"Substitute (used, 78')",11,REAL
+p_arg_13,Lautaro Martínez,ARG,FWD,"Substitute (used, 85')",22,REAL
+p_arg_14,Gonzalo Montiel,ARG,DEF,"Substitute (used, 85')",4,REAL
+p_arg_15,Thiago Almada,ARG,MID,"Substitute (used, ~90' estimated pairing, see README)",16,MIXED
+p_arg_16,Nicolás Otamendi,ARG,DEF,"Substitute (used, ~105' estimated pairing, see README)",19,MIXED
+p_arg_17,José Manuel López,ARG,FWD,"Substitute (used, ~110' estimated pairing, see README)",18,MIXED
+p_arg_18,Gerónimo Rulli,ARG,GK,Substitute (unused),12,MODELED_PLACEHOLDER
+p_arg_19,Juan Musso,ARG,GK,Substitute (unused),1,MODELED_PLACEHOLDER
+p_arg_20,Facundo Medina,ARG,DEF,Substitute (unused),6,MODELED_PLACEHOLDER
+p_arg_21,Giovani Lo Celso,ARG,MID,Substitute (unused),14,MODELED_PLACEHOLDER
+p_arg_22,Exequiel Palacios,ARG,MID,Substitute (unused),17,MODELED_PLACEHOLDER
+p_arg_23,Valentín Barco,ARG,DEF,Substitute (unused),8,MODELED_PLACEHOLDER
+p_sui_01,Gregor Kobel,SUI,GK,Starter,1,REAL
+p_sui_02,Denis Zakaria,SUI,DEF,Starter,4,REAL
+p_sui_03,Nico Elvedi,SUI,DEF,Starter,14,REAL
+p_sui_04,Manuel Akanji,SUI,DEF,Starter,2,REAL
+p_sui_05,Ricardo Rodríguez,SUI,DEF,Starter,13,REAL
+p_sui_06,Djibril Sow,SUI,MID,Starter,6,REAL
+p_sui_07,Granit Xhaka,SUI,MID,Starter (captain),10,REAL
+p_sui_08,Remo Freuler,SUI,MID,"Starter (off ~106', extra time)",8,REAL
+p_sui_09,Dan Ndoye,SUI,FWD,Starter,11,REAL
+p_sui_10,Breel Embolo,SUI,FWD,"Starter (red card 72', see README)",7,REAL
+p_sui_11,Fabian Rieder,SUI,FWD,Starter,17,REAL
+p_sui_12,Rubén Vargas,SUI,FWD,"Substitute (used, ~106', extra time)",20,REAL
+p_sui_13,Philipp Köhn,SUI,GK,Substitute (unused),12,MODELED_PLACEHOLDER
+p_sui_14,Yvon Mvogo,SUI,GK,Substitute (unused),21,MODELED_PLACEHOLDER
+p_sui_15,Becir Omeragic,SUI,DEF,Substitute (unused),5,MODELED_PLACEHOLDER
+p_sui_16,Fabian Schär,SUI,DEF,Substitute (unused),15,MODELED_PLACEHOLDER
+p_sui_17,Silvan Widmer,SUI,DEF,Substitute (unused),3,MODELED_PLACEHOLDER
+p_sui_18,Michel Aebischer,SUI,MID,Substitute (unused),18,MODELED_PLACEHOLDER
+p_sui_19,Christian Fassnacht,SUI,MID,Substitute (unused),16,MODELED_PLACEHOLDER
+p_sui_20,Noah Okafor,SUI,FWD,Substitute (unused),19,MODELED_PLACEHOLDER
+p_sui_21,Zeki Amdouni,SUI,FWD,Substitute (unused),9,MODELED_PLACEHOLDER
+p_sui_22,Andi Zeqiri,SUI,FWD,Substitute (unused),22,MODELED_PLACEHOLDER

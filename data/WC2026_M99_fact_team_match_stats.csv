@@ -1,0 +1,3 @@
+match_id,team_id,possession_pct,shots_total,shots_on_target,shots_off_target,shots_blocked,xg,xg_on_target,corners,offsides,fouls_committed,yellow_cards,red_cards,passes_attempted,passes_completed,pass_accuracy_pct,saves,big_chances_created,big_chances_missed,touches_in_box,data_source,data_source_detail
+WC2026_M99,NOR,48,13,4,7,2,0.77,0.39,7,1,10,1,0,576,492,85.0,6,1,1,31,MIXED,"ALL FIELDS REAL (ESPN final/AET team-stats page) except xg_on_target label mapping and shots_off_target/blocked split, which are derived from the corrected shot log = MODELED"
+WC2026_M99,ENG,52,14,8,4,2,0.96,2.9,4,5,8,0,0,628,569,90.6,3,2,1,31,MIXED,"ALL FIELDS REAL (ESPN final/AET team-stats page) except shots_off_target/blocked split, which is derived from the corrected shot log = MODELED"

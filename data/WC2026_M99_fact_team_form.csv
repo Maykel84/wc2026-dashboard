@@ -1,0 +1,11 @@
+match_id,team_id,date,opponent,competition_stage,result,score,venue_type,data_source
+WC2026_M99,NOR,2026-07-05,Brazil,Round of 16,W,2-1,Away,REAL
+WC2026_M99,NOR,2026-06-30,Ivory Coast,Round of 32,W,2-1,Away,REAL
+WC2026_M99,NOR,2026-06-26,France,Group Stage,L,1-4,Home,REAL
+WC2026_M99,NOR,2026-06-22,Senegal,Group Stage,W,3-2,Home,REAL
+WC2026_M99,NOR,2026-06-16,Iraq,Group Stage,W,4-1,Away,REAL
+WC2026_M99,ENG,2026-07-05,Mexico,Round of 16,W,3-2,Away,REAL
+WC2026_M99,ENG,2026-07-01,DR Congo,Round of 32,W,2-1,Home,REAL
+WC2026_M99,ENG,2026-06-27,Panama,Group Stage,W,2-0,Away,REAL
+WC2026_M99,ENG,2026-06-23,Ghana,Group Stage,D,0-0,Home,REAL
+WC2026_M99,ENG,2026-06-17,Croatia,Group Stage,W,4-2,Home,REAL

@@ -1,0 +1,7 @@
+match_id,market,selection_team_id,american_odds,data_source
+WC2026_M98,Moneyline,ESP,-160,REAL
+WC2026_M98,Moneyline,BEL,450,REAL
+WC2026_M98,Moneyline,Draw,290,REAL
+WC2026_M98,Total Goals Over 2.5,,-125,REAL
+WC2026_M98,Total Goals Under 2.5,,-105,REAL
+WC2026_M98,Spread ESP -0.5,ESP,-165,REAL

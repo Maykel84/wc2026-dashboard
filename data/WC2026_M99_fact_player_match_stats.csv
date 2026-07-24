@@ -1,0 +1,34 @@
+match_id,player_id,player_name,team_id,minutes_played,goals,assists,shots,shots_on_target,xg,key_passes,passes_attempted,passes_completed,tackles,interceptions,clearances,saves,card,touches,data_source
+WC2026_M99,p_nor_01,Ørjan Håskjold Nyland,NOR,120,0,0,0,0,0,0,89,81,0,0,0,6,,110,MODELED
+WC2026_M99,p_nor_02,Julian Ryerson,NOR,60,0,0,0,0,0,0,52,44,2,0,0,0,,67,MODELED
+WC2026_M99,p_nor_03,Kristoffer Ajer,NOR,120,0,0,1,1,0.05,0,122,107,0,2,5,0,Yellow,157,REAL
+WC2026_M99,p_nor_04,Torbjørn Heggem,NOR,90,0,0,0,0,0,0,76,71,3,1,0,0,,92,MODELED
+WC2026_M99,p_nor_05,David Møller Wolfe,NOR,90,0,0,0,0,0,0,79,66,1,2,0,0,,93,MODELED
+WC2026_M99,p_nor_06,Patrick Berg,NOR,120,0,0,1,1,0.03,0,94,79,3,2,1,0,,105,MODELED
+WC2026_M99,p_nor_07,Alexander Sørloth,NOR,68,0,0,2,0,0.24,0,68,61,0,0,2,0,,85,MODELED
+WC2026_M99,p_nor_08,Sander Berge,NOR,120,0,0,0,0,0,0,125,108,0,2,2,0,,151,MODELED
+WC2026_M99,p_nor_09,Erling Haaland,NOR,105,0,0,2,1,0.11,0,101,93,2,0,1,0,,129,MODELED
+WC2026_M99,p_nor_10,Martin Ødegaard,NOR,120,0,0,1,0,0.03,0,104,96,2,2,2,0,,121,MODELED
+WC2026_M99,p_nor_21,Andreas Schjelderup,NOR,68,1,0,1,1,0.03,0,61,56,3,1,1,0,,69,REAL
+WC2026_M99,p_nor_14,Fredrik Aursnes,NOR,60,0,0,1,0,0.03,0,59,49,3,0,2,0,,75,MODELED
+WC2026_M99,p_nor_20,Antonio Nusa,NOR,52,0,0,3,0,0.16,0,52,43,3,1,2,0,,66,MODELED
+WC2026_M99,p_nor_22,Oscar Bobb,NOR,52,0,0,1,0,0.09,0,52,47,2,2,0,0,,66,MODELED
+WC2026_M99,p_nor_15,Leo Østigård,NOR,30,0,0,0,0,0,0,27,23,3,2,2,0,,30,MODELED
+WC2026_M99,p_nor_16,Marcus Holmgren Pedersen,NOR,30,0,0,0,0,0,0,30,26,0,0,1,0,,36,MODELED
+WC2026_M99,p_nor_11,Jørgen Strand Larsen,NOR,15,0,0,0,0,0,0,13,12,1,1,2,0,,16,MODELED
+WC2026_M99,p_eng_01,Jordan Pickford,ENG,120,0,0,0,0,0,0,100,89,0,0,0,3,,110,MODELED
+WC2026_M99,p_eng_02,Ezri Konsa,ENG,89,0,0,0,0,0,0,102,89,2,2,1,0,,115,MODELED
+WC2026_M99,p_eng_03,Nico O'Reilly,ENG,86,0,0,0,0,0,0,73,61,0,2,0,0,,83,MODELED
+WC2026_M99,p_eng_04,Declan Rice,ENG,46,0,0,0,0,0,0,39,36,1,1,2,0,,43,MODELED
+WC2026_M99,p_eng_05,John Stones,ENG,120,0,0,0,0,0,0,113,103,2,1,5,0,,144,MODELED
+WC2026_M99,p_eng_06,Marc Guéhi,ENG,120,0,0,0,0,0,0,130,111,3,2,5,0,,155,MODELED
+WC2026_M99,p_eng_08,Elliot Anderson,ENG,120,0,0,0,0,0,0,107,89,3,1,0,0,,134,MODELED
+WC2026_M99,p_eng_09,Harry Kane,ENG,120,0,0,3,2,0.093,0,93,78,1,0,1,0,,117,MODELED
+WC2026_M99,p_eng_10,Jude Bellingham,ENG,111,2,0,5,3,0.52,0,87,77,3,2,1,0,,111,REAL
+WC2026_M99,p_eng_18,Anthony Gordon,ENG,120,0,1,0,0,0,4,125,115,1,1,1,0,,147,REAL
+WC2026_M99,p_eng_20,Noni Madueke,ENG,46,0,0,0,0,0,0,43,39,3,0,1,0,,49,MODELED
+WC2026_M99,p_eng_07,Bukayo Saka,ENG,74,0,0,3,1,0.17,0,66,60,1,1,0,0,,74,MODELED
+WC2026_M99,p_eng_21,Eberechi Eze,ENG,74,0,0,1,0,0.03,0,59,53,1,2,0,0,,70,MODELED
+WC2026_M99,p_eng_25,Djed Spence,ENG,34,0,0,1,1,0.13,0,31,29,1,2,1,0,,35,MODELED
+WC2026_M99,p_eng_17,Morgan Rogers,ENG,31,0,1,1,1,0.02,2,35,32,2,1,2,0,,42,REAL
+WC2026_M99,p_eng_15,Dan Burn,ENG,9,0,0,0,0,0,0,9,8,1,1,0,0,,10,MODELED

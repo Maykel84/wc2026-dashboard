@@ -1,0 +1,46 @@
+player_id,player_name,team_id,position,match_role,shirt_number_placeholder,data_source
+p_nor_01,Ørjan Håskjold Nyland,NOR,GK,Starter,1,REAL
+p_nor_02,Julian Ryerson,NOR,DEF,Starter (off 60'),2,REAL
+p_nor_03,Kristoffer Ajer,NOR,DEF,Starter (yellow card ~58'),3,REAL
+p_nor_04,Torbjørn Heggem,NOR,DEF,Starter (off 90'),4,REAL
+p_nor_05,David Møller Wolfe,NOR,DEF,Starter (off 90'),5,REAL
+p_nor_06,Patrick Berg,NOR,MID,Starter,6,REAL
+p_nor_07,Alexander Sørloth,NOR,FWD,Starter (off 68'),7,REAL
+p_nor_08,Sander Berge,NOR,MID,Starter,8,REAL
+p_nor_09,Erling Haaland,NOR,FWD,Starter (off 105'),9,REAL
+p_nor_10,Martin Ødegaard,NOR,MID,Starter (captain),10,REAL
+p_nor_21,Andreas Schjelderup,NOR,FWD,Starter (off 68'),21,REAL
+p_nor_14,Fredrik Aursnes,NOR,MID,"Substitute (used, 60')",14,REAL
+p_nor_20,Antonio Nusa,NOR,FWD,"Substitute (used, 68')",20,REAL
+p_nor_22,Oscar Bobb,NOR,FWD,"Substitute (used, 68')",22,REAL
+p_nor_15,Leo Østigård,NOR,DEF,"Substitute (used, 90')",15,REAL
+p_nor_16,Marcus Holmgren Pedersen,NOR,DEF,"Substitute (used, 90')",16,REAL
+p_nor_11,Jørgen Strand Larsen,NOR,FWD,"Substitute (used, 105')",11,REAL
+p_nor_17,Ørjan Nyland (backup listed placeholder),NOR,GK,"Substitute (unused, see README)",12,MODELED_PLACEHOLDER
+p_nor_18,Rune Jarstein,NOR,GK,"Substitute (unused, see README)",13,MODELED_PLACEHOLDER
+p_nor_19,Stefan Strandberg,NOR,DEF,"Substitute (unused, see README)",17,MODELED_PLACEHOLDER
+p_nor_23,Morten Thorsby,NOR,MID,"Substitute (unused, see README)",18,MODELED_PLACEHOLDER
+p_nor_24,Mathias Normann,NOR,MID,"Substitute (unused, see README)",19,MODELED_PLACEHOLDER
+p_nor_25,Ola Solbakken,NOR,FWD,"Substitute (unused, see README)",23,MODELED_PLACEHOLDER
+p_eng_01,Jordan Pickford,ENG,GK,Starter,1,REAL
+p_eng_02,Ezri Konsa,ENG,DEF,Starter (off 89'),2,REAL
+p_eng_03,Nico O'Reilly,ENG,DEF,Starter (off 86'),3,REAL
+p_eng_04,Declan Rice,ENG,MID,Starter (off 46'),4,REAL
+p_eng_05,John Stones,ENG,DEF,Starter,5,REAL
+p_eng_06,Marc Guéhi,ENG,DEF,Starter,6,REAL
+p_eng_08,Elliot Anderson,ENG,MID,Starter,8,REAL
+p_eng_09,Harry Kane,ENG,FWD,Starter (captain),9,REAL
+p_eng_10,Jude Bellingham,ENG,MID,Starter (off 111'),10,REAL
+p_eng_18,Anthony Gordon,ENG,MID,Starter,18,REAL
+p_eng_20,Noni Madueke,ENG,FWD,Starter (off 46'),20,REAL
+p_eng_07,Bukayo Saka,ENG,FWD,"Substitute (used, 46')",7,REAL
+p_eng_21,Eberechi Eze,ENG,MID,"Substitute (used, 46')",21,REAL
+p_eng_25,Djed Spence,ENG,DEF,"Substitute (used, 86')",25,REAL
+p_eng_17,Morgan Rogers,ENG,FWD,"Substitute (used, 89')",17,REAL
+p_eng_15,Dan Burn,ENG,DEF,"Substitute (used, 111')",15,REAL
+p_eng_11,Marcus Rashford,ENG,FWD,Substitute (unused),11,REAL
+p_eng_12,Trevoh Chalobah,ENG,DEF,Substitute (unused),12,REAL
+p_eng_13,Dean Henderson,ENG,GK,Substitute (unused),13,REAL
+p_eng_14,Cole Palmer,ENG,MID,"Substitute (unused, see README)",14,MODELED_PLACEHOLDER
+p_eng_16,Phil Foden,ENG,MID,"Substitute (unused, see README)",16,MODELED_PLACEHOLDER
+p_eng_19,Levi Colwill,ENG,DEF,"Substitute (unused, see README)",19,MODELED_PLACEHOLDER

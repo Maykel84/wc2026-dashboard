@@ -1,0 +1,2 @@
+match_id,competition,season,stage,match_number_wc2026,match_date,kickoff_utc,kickoff_local,venue,venue_broadcast_name,city,country,attendance,referee,referee_country,home_team_id,away_team_id,home_score,away_score,extra_time,penalties,data_source
+WC2026_M98,FIFA World Cup,2026,Quarterfinal,"98 (confirmed by elimination, see README)",2026-07-10,19:00,20:00 UK / 15:00 ET / 21:00 CEST,SoFi Stadium,Los Angeles Stadium,Inglewood,USA,70492,Michael Oliver,England,ESP,BEL,2,1,No,No,REAL
