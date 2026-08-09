@@ -3,6 +3,10 @@ mplsoccer-based pitch visualizations: shot maps, heatmaps, pass-into-box maps.
 Pitch is 105x68, both teams already normalized to attack right (toward x=105, y=34),
 matching the coordinate convention used across all fact_shots / fact_passes_into_box
 / dim_pitch_zone tables in the WC2026 dataset.
+
+These charts are rendered as static matplotlib images, so any on-image text
+(titles, zone labels, colorbar) is baked in at render time — pass lang="pl" to
+get the Polish labels; English ("en") is the default.
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,7 +17,22 @@ OUTCOME_COLORS = {
     "Off Target": "#8a8f98", "Hit Woodwork": "#e0524b",
 }
 
-HEATMAP_CMAP = "RdYlGn_r"  # green = mało dotknięć, czerwony = dużo dotknięć
+HEATMAP_CMAP = "RdYlGn_r"  # green = few touches, red = many touches
+
+LABELS = {
+    "en": {
+        "shot_map_title": "Size = xG · star = goal",
+        "touches": "touches",
+        "thirds": ("DEFENSE", "MIDFIELD", "ATTACK"),
+        "pass_map_title": "Green = successful · dashed = unsuccessful · gold = led to a shot",
+    },
+    "pl": {
+        "shot_map_title": "Rozmiar = xG · gwiazdka = gol",
+        "touches": "dotknięcia",
+        "thirds": ("OBRONA", "POMOC", "ATAK"),
+        "pass_map_title": "Zielone = skuteczne · przerywane = nieskuteczne · złote = poprowadziło do strzału",
+    },
+}
 
 
 def make_pitch(figsize=(8, 5.2), pitch_color="#0e1117", line_color="#4a5568", line_zorder=0.9):
@@ -25,7 +44,9 @@ def make_pitch(figsize=(8, 5.2), pitch_color="#0e1117", line_color="#4a5568", li
     return pitch, fig, ax
 
 
-def shot_map(shots_df, home_id, away_id, home_color="#6cace4", away_color="#e0524b", highlight_shot_id=None):
+def shot_map(shots_df, home_id, away_id, home_color="#6cace4", away_color="#e0524b",
+             highlight_shot_id=None, lang="en"):
+    L = LABELS.get(lang, LABELS["en"])
     pitch, fig, ax = make_pitch()
     for team, base_color in [(home_id, home_color), (away_id, away_color)]:
         sub = shots_df[shots_df["team_id"] == team]
@@ -53,11 +74,12 @@ def shot_map(shots_df, home_id, away_id, home_color="#6cace4", away_color="#e052
                         textcoords="offset points", color="#f2c14e", fontsize=9,
                         fontweight="bold", ha="center", zorder=6)
 
-    ax.set_title("Rozmiar = xG · gwiazdka = gol", color="#9aa4b2", fontsize=9, loc="left")
+    ax.set_title(L["shot_map_title"], color="#9aa4b2", fontsize=9, loc="left")
     return fig
 
 
-def heatmap(heat_df, zone_df, team_id, cmap=None, show_points=False):
+def heatmap(heat_df, zone_df, team_id, cmap=None, lang="en"):
+    L = LABELS.get(lang, LABELS["en"])
     cmap = cmap or HEATMAP_CMAP
     # line_zorder above the imshow (zorder=1) so the pitch markings stay visible on top of the heat.
     pitch, fig, ax = make_pitch(pitch_color="#0e1117", line_zorder=3)
@@ -69,20 +91,6 @@ def heatmap(heat_df, zone_df, team_id, cmap=None, show_points=False):
         grid[ri, ci] = sub.get(z["zone_code"], 0)
     im = ax.imshow(grid, extent=[0, 105, 0, 68], origin="lower", cmap=cmap,
                     alpha=0.85, aspect="auto", zorder=1, interpolation="bicubic")
-
-    if show_points:
-        # We only have per-zone touch totals, not raw touch coordinates, so this
-        # plots a marker at each zone's center sized/labelled by that player's
-        # real touch count there — the closest honest stand-in for a movement map.
-        for _, z in zone_df.iterrows():
-            t = sub.get(z["zone_code"], 0)
-            if t <= 0:
-                continue
-            cx, cy = (z["x_min"] + z["x_max"]) / 2, (z["y_min"] + z["y_max"]) / 2
-            ax.scatter(cx, cy, s=40 + t * 22, color="#101418", edgecolors="#f5f7fa",
-                       linewidth=1.1, alpha=0.9, zorder=5)
-            ax.text(cx, cy, str(int(t)), color="white", fontsize=7.5, ha="center", va="center",
-                    fontweight="bold", zorder=6)
 
     # Overlay the underlying pitch-zone grid so individual zones stay distinguishable.
     x_bounds = sorted(set(zone_df["x_min"]) | set(zone_df["x_max"]))
@@ -98,17 +106,16 @@ def heatmap(heat_df, zone_df, team_id, cmap=None, show_points=False):
     third2 = x_min + 2 * (x_max - x_min) / 3
     for x in (third1, third2):
         ax.plot([x, x], [0, 68], color="#f5f7fa", alpha=0.6, lw=1.4, zorder=3, linestyle=(0, (4, 3)))
-    for xc, label in [((x_min + third1) / 2, "OBRONA"),
-                       ((third1 + third2) / 2, "POMOC"),
-                       ((third2 + x_max) / 2, "ATAK")]:
+    for xc, label in zip([(x_min + third1) / 2, (third1 + third2) / 2, (third2 + x_max) / 2], L["thirds"]):
         ax.text(xc, 64.2, label, color="#f5f7fa", alpha=0.85, fontsize=8.5, ha="center",
                 va="center", fontweight="bold", zorder=4)
 
-    fig.colorbar(im, ax=ax, fraction=0.03, pad=0.02, label="dotknięcia")
+    fig.colorbar(im, ax=ax, fraction=0.03, pad=0.02, label=L["touches"])
     return fig
 
 
-def pass_map(passes_df, team_id, color="#3fbf7f", fail_color="#e0524b"):
+def pass_map(passes_df, team_id, color="#3fbf7f", fail_color="#e0524b", lang="en"):
+    L = LABELS.get(lang, LABELS["en"])
     pitch, fig, ax = make_pitch()
     sub = passes_df[passes_df["team_id"] == team_id]
     success = sub[sub["outcome"] == "Successful"]
@@ -120,6 +127,5 @@ def pass_map(passes_df, team_id, color="#3fbf7f", fail_color="#e0524b"):
     led = success[success["led_to_shot_within_10s"] == "Yes"]
     pitch.scatter(led["destination_x"], led["destination_y"], s=90, color="#f2c14e",
                   edgecolors="white", linewidth=0.6, ax=ax, zorder=4, marker="o")
-    ax.set_title("Zielone = skuteczne · przerywane = nieskuteczne · złote = poprowadziło do strzału",
-                 color="#9aa4b2", fontsize=8, loc="left")
+    ax.set_title(L["pass_map_title"], color="#9aa4b2", fontsize=8, loc="left")
     return fig
